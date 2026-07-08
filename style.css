@@ -53,6 +53,7 @@ h1, h2, h3, h4 {
 .btn:hover {
     animation-play-state: paused;
     background-color: var(--cor-olive-petal);
+    color: var(--cor-artic-daisy);
 }
 
 
@@ -171,7 +172,7 @@ header nav button:hover {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
-    background-image: url('sobre-fundo.webp');
+    background-image: url('/imagens/sobre-fundo.webp');
     background-size: cover;
     background-position: center;
     
@@ -197,6 +198,7 @@ header nav button:hover {
 #habilidades h2 {
     text-align: center;
     font-size: 2.5rem;
+    padding-bottom: 2rem;
 }
 
 .habilidades-conteiner {
@@ -208,7 +210,182 @@ header nav button:hover {
 .tecnicas,
 .ferramentas,
 .pessoais {
-    background-color: var(--cor-olive-petal);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(163, 163, 128, 0.3);
     padding: 32px;
+    border-radius: 10px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.tecnicas:hover,
+.ferramentas:hover,
+.pessoais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tecnicas h3,
+.ferramentas h3,
+.pessoais h3 {
+    font-size: 1.5rem;
+    color: var(--cor-rose-blush);  
+    text-align: center;
+}
+
+.tecnicas ul,
+.ferramentas ul,
+.pessoais ul {
+    list-style-type: none;
+}
+
+.tecnicas li,
+.ferramentas li,
+.pessoais li {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.habilidades-conteiner li::before {
+    content: '✦';
+    color: var(--cor-rose-blush);
+    margin-right: 8px;
+}
+
+.divisor {
+    text-align: center;
+    color: var(--cor-rose-blush);
+    font-size: 1.5rem;
+    padding: 2rem 0;
+}
+
+/* PROJETOS */
+#projetos {
+    padding: 60px 0;
+}
+
+#projetos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+/* CATEGORIAS */
+.categoria {
+    padding: 80px 48px;
+}
+
+.categoria-1 {
+    background-color: var(--cor-olive-petal);
+}
+
+.categoria-2 {
+    background-color: rgba(216, 164, 143, 0.2);
+}
+
+.categoria-3 {
+    background-color: var(--cor-olive-petal);
+}
+
+.categoria h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+}
+
+/* CARDS */
+.card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.card-imagem {
+    width: 45%;
+}
+
+.card-imagem img {
+    width: 100%;
+    border: 2px solid var(--cor-textos);
+    border-radius: 8px;
+}
+
+.categoria-1 .card-imagem img,
+.categoria-3 .card-imagem img {
+    border-color: var(--cor-artic-daisy);
+}
+
+.card-texto {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.card-texto h4 {
+    font-size: 1.5rem;
+}
+
+.card-texto p {
+    font-size: 1.1rem;
+}
+
+.card-texto ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.card-texto ul li {
+    font-size: 1.5rem;
+}
+
+/* CORES POR CATEGORIA */
+.categoria-1 h4,
+.categoria-3 h4,
+.categoria-1 .tags li,
+.categoria-3 .tags li {
+    color: var(--cor-artic-daisy);
+}
+
+.categoria-2 h4,
+.categoria-2 .tags li {
+    color: var(--cor-rose-blush);
+}
+
+/* BOTÕES POR CATEGORIA */
+.categoria-1 .card-texto a,
+.categoria-3 .card-texto a {
+    background-color: var(--cor-artic-daisy);
+    color: var(--cor-textos);
+    padding: 10px 24px;
+    border-radius: 50px;
+    align-self: flex-start;
+    border: 2px solid var(--cor-artic-daisy);
+    transition: 0.3s ease;
+}
+
+.categoria-1 .card-texto a:hover,
+.categoria-3 .card-texto a:hover {
+    background-color: transparent;
+    color: var(--cor-artic-daisy);
+}
+
+.categoria-2 .card-texto a {
+    background-color: var(--cor-rose-blush);
+    color: var(--cor-artic-daisy);
+    padding: 10px 24px;
+    border-radius: 50px;
+    align-self: flex-start;
+    border: 2px solid var(--cor-rose-blush);
+    transition: 0.3s ease;
+}
+
+.categoria-2 .card-texto a:hover {
+    background-color: transparent;
+    color: var(--cor-rose-blush);
+}
