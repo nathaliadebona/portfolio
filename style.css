@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -552,4 +556,8 @@ footer .redes-sociais a:hover {
 #btn-topo.visivel {
     opacity: 1;
     visibility: visible;
+}
+
+@media (max-width: 768px) {
+
 }
