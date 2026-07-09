@@ -147,6 +147,10 @@ header nav button:hover {
     border-color: var(--cor-artic-daisy);
 }
 
+#btn-menu {
+    display: none;
+}
+
 header.scrolled {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -559,10 +563,42 @@ footer .redes-sociais a:hover {
 }
 
 @media (max-width: 768px) {
+    #btn-menu {
+        display: block;
+        background: transparent;
+        border: none;
+        color: var(--cor-artic-daisy);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-botoes {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    header ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-olive-petal);
+        padding: 20px 48px;
+        gap: 1.5rem;
+    }
+
+    header ul.aberto {
+        display: flex;
+    }
+
     #hero {
         flex-direction: column;
         text-align: center;
         padding-top: 150px;
+        gap: 1rem;
     }
 
     #hero h1 {
@@ -575,5 +611,32 @@ footer .redes-sociais a:hover {
 
     #hero img {
         width: 70%;
+    }
+
+    .btn {
+        align-self: center;
+    }
+
+    .habilidades-conteiner {
+        flex-wrap: wrap;
+    }
+
+    .tecnicas,
+    .ferramentas,
+    .pessoais {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-imagem,
+    .card-texto {
+        width: 100%;
+    }
+
+    .categoria-2 .card {
+        flex-direction: column;
     }
 }

@@ -125,3 +125,22 @@ form.addEventListener('submit', async (evento) => {
         alert('Ops, algo deu errado. Tente novamente!');
     }
 });
+
+const btnMenu = document.querySelector('#btn-menu');
+const menu = document.querySelector('header ul');
+
+btnMenu.addEventListener('click', () => {
+    menu.classList.toggle('aberto');
+});
+
+linksMenu.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('aberto');
+    });
+});
+
+document.addEventListener('click', (evento) => {
+    if (!menu.contains(evento.target) && !btnMenu.contains(evento.target)) {
+        menu.classList.remove('aberto');
+    }
+});
