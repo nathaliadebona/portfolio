@@ -666,4 +666,8 @@ footer .redes-sociais a:hover {
     #sobre p {
         font-size: 1rem;
     }
+
+    .card-texto ul {
+        flex-wrap: wrap;
+    }
 }
