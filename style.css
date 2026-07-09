@@ -559,5 +559,17 @@ footer .redes-sociais a:hover {
 }
 
 @media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
 
+    .hero-texto {
+        align-items: center;
+    }
+
+    #hero img {
+        width: 70%;
+    }
 }
