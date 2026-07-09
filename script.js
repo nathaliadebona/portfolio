@@ -105,3 +105,23 @@ setInterval(() => {
         }
     }
 }, 100);
+
+const form = document.querySelector('#form-contato');
+
+form.addEventListener('submit', async (evento) => {
+    evento.preventDefault();
+
+    const resposta = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    });
+
+    if (resposta.ok) {
+        // envio bem sucedido
+        form.reset(); // limpa o formulário
+        alert('Mensagem enviada com sucesso!');
+    } else {
+        alert('Ops, algo deu errado. Tente novamente!');
+    }
+});
