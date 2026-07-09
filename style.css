@@ -562,7 +562,11 @@ footer .redes-sociais a:hover {
     #hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 120px;
+        padding-top: 150px;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
     }
 
     .hero-texto {
