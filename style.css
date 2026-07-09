@@ -670,4 +670,8 @@ footer .redes-sociais a:hover {
     .card-texto ul {
         flex-wrap: wrap;
     }
+
+    .tag-texto {
+        font-size: 0.9rem;
+    }
 }
