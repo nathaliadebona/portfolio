@@ -8,6 +8,10 @@
     --fonte-corpo: 'Jost', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -56,6 +60,18 @@ h1, h2, h3, h4 {
     color: var(--cor-artic-daisy);
 }
 
+#sobre h2::after,
+#habilidades h2::after,
+#projetos h2::after,
+#contato h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--cor-rose-blush);
+    margin: 12px auto 0;
+}
+
 
 header {
     position: fixed;
@@ -97,15 +113,18 @@ header ul li a::after {
     height: 2px;
     width: 0;
     background-color: var(--cor-artic-daisy);
+    transition: width 0.3s ease;
 }
 
 header ul li a:hover::after {
     width: 100%;
-    transition: width 0.3s ease;
+}
+
+header ul li a.ativo::after {
+    width: 100%;
 }
 
 header ul li a:hover {
-    width: 100%;
     color: var(--cor-artic-daisy);
 }
 
@@ -124,14 +143,20 @@ header nav button:hover {
     border-color: var(--cor-artic-daisy);
 }
 
+header.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 #hero {
     display: flex;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     min-height: 100vh;
     padding-top: 80px;
     padding-left: 48px;
     padding-right: 48px;
-    gap: 4rem;
+    gap: 2rem;
 }
 
 .hero-texto {
@@ -139,6 +164,7 @@ header nav button:hover {
     flex-direction: column;
     width: 60%;
     gap: 1rem;
+    flex: 1;
 }
 
 #hero span {
@@ -149,6 +175,7 @@ header nav button:hover {
 
 #hero h1 {
     font-size: 4rem;
+    min-height: 1.3em;
 }
 
 #hero h2 {
@@ -163,8 +190,17 @@ header nav button:hover {
 }
 
 #hero img {
-    width: 40%;
+    flex-shrink: 0;
+    width: 380px;
+    max-width: 450px;
     border-radius: 16px;
+    animation: balancear 4s ease-in-out infinite;
+}
+
+@keyframes balancear {
+    0% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    100% { transform: rotate(-2deg); }
 }
 
 #sobre {
@@ -172,7 +208,7 @@ header nav button:hover {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
-    background-image: url('/imagens/sobre-fundo.webp');
+    background-image: url('imagens/sobre-fundo.webp');
     background-size: cover;
     background-position: center;
     
@@ -302,6 +338,12 @@ header nav button:hover {
     gap: 2rem;
     padding: 20px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .card-imagem {
@@ -388,4 +430,126 @@ header nav button:hover {
 .categoria-2 .card-texto a:hover {
     background-color: transparent;
     color: var(--cor-rose-blush);
+}
+
+.categoria-2 .card {
+    flex-direction: row-reverse;
+}
+
+#contato {
+    padding: 80px 48px;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+#contato p {
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contato label {
+    text-align: left;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-olive-petal);
+    background-color: transparent;
+    border-radius: 8px;
+    font-family: var(--fonte-corpo);
+}
+
+#contato button {
+    display: inline-block;
+    color: var(--cor-textos);
+    padding: 10px 24px;
+    align-self: center;
+    cursor: pointer;
+    border: transparent;
+    border-radius: 50px;
+    background-color: var(--cor-rose-blush);
+    transition: 0.3s ease;
+}
+
+#contato button:hover {
+    background-color: var(--cor-olive-petal);
+    color: var(--cor-artic-daisy);
+}
+
+#contato .redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+#contato .redes-sociais a {
+    color: var(--cor-textos);
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+#contato .redes-sociais a:hover {
+    color: var(--cor-olive-petal);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: var(--cor-olive-petal);
+    padding: 30px 0;
+    color: var(--cor-artic-daisy);
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    font-family: var(--fonte-corpo);
+}
+
+footer .redes-sociais a {
+    color: var(--cor-artic-daisy);
+}
+
+footer .redes-sociais a:hover {
+    color: var(--cor-rose-blush);
+}
+
+#btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--cor-rose-blush);
+    cursor: pointer;
+    border: none;
+    font-size: 2rem;
+    color: var(--cor-artic-daisy);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#btn-topo.visivel {
+    opacity: 1;
+    visibility: visible;
 }

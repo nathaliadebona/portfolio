@@ -31,7 +31,7 @@
     <main>
         <section id="hero">
             <div class="hero-texto">
-                <span data-pt="Olá, eu sou" data-en="Hi I'm">
+                <span data-pt="Olá, eu sou" data-en="Hi, I'm">
                     Olá, eu sou
                 </span>
                 <h1>Nathália de Bona</h1>
@@ -455,6 +455,8 @@
             </div>
         </section>
 
+        <div class="divisor">✦ ✧ ✦</div>
+
         <section id="contato">
             <h2 data-pt="Vamos conversar?" data-en="Let's talk?">
                 Vamos conversar?
@@ -465,14 +467,16 @@
                 Seja para um projeto, uma troca ou só para dizer oi — estou por aqui. 😊
             </p>
 
-            <form action="" id="form-contato">
+            <form action="https://formspree.io/f/mzdllqvn" method="POST" id="form-contato">
+
+                <input type="hidden" name="_next" value="https://nathaliadebona.github.io/portfolio/">
 
                 <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
                 <input type="text" id="nome" name="nome" placeholder="Seu nome"
                         data-placeholder-pt="Seu nome" data-placeholder-en="Your name">
 
                 <label for="email" data-pt="E-mail" data-en="E-mail">E-mail</label>
-                <input type="email" id="email" placeholder="seu@email.com"
+                <input type="email" id="email" name="email" placeholder="seu@email.com"
                         data-placeholder-pt="seu@email.com" data-placeholder-en="your@email.com">
 
                 <label for="mensagem" data-pt="Mensagem"
