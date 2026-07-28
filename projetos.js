@@ -261,11 +261,6 @@ document.querySelectorAll('.btn-detalhes').forEach(btn => {
         const modalIcones = document.querySelector('.modal-tags ul:first-child');
         const modalTexto = document.querySelector('.modal-tags ul:last-child');
 
-        modalNome.textContent = projeto.nome;
-        modalLink.href = projeto.link;
-        modalLink.target = '_blank';
-        modalLink.textContent = 'Ver site';
-
         modalIcones.innerHTML = '';
         modalTexto.innerHTML = '';
 
@@ -275,7 +270,11 @@ document.querySelectorAll('.btn-detalhes').forEach(btn => {
 
         const idioma = document.documentElement.lang.startsWith('en') ? 'en' : 'pt';
 
+        modalNome.textContent = projeto.nome;
         modalDescricao.textContent = projeto.descricao[idioma];
+        modalLink.href = projeto.link;
+        modalLink.target = '_blank';
+        modalLink.textContent = idioma === 'pt' ? 'Ver site' : 'View site';
 
         projeto.tags.texto[idioma].forEach(tag => {
             modalTexto.innerHTML += `<li>${tag}</li>`;
