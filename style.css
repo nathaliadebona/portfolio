@@ -807,6 +807,67 @@ footer .redes-sociais a:hover {
     color: var(--cor-dourado);
 }
 
+/* Modal projetos*/
+#modal-projeto {
+    width: 900px;
+    max-height: 80vh;
+    margin: auto;
+    padding: 2rem;
+    background-image: url(imagens/fundo-modal.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: none;
+}
+
+#modal-projeto::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-conteudo {
+    display: flex;
+}
+
+.modal-carrossel {
+    width: 50%;
+    overflow: hidden;
+}
+
+.modal-track {
+    display: flex;
+    transition: 0.3s ease;
+}
+
+.modal-track img {
+    min-width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.modal-info {
+    width: 50%;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-fechar {
+    display: block;
+    margin-left: auto;
+    margin-top: -0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cor-textos);
+    transition: color 0.3s ease;
+}
+
+.btn-fechar:hover {
+    color: var(--cor-rose-blush);
+}
+
 @media (max-width: 768px) {
     #btn-menu {
         display: block;
