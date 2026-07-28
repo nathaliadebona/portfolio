@@ -31,9 +31,11 @@ btnIdioma.addEventListener('click', () => {
     if (idiomaAtual === "pt") {
         idiomaAtual = "en";
         btnIdioma.textContent = "PT"
+        document.documentElement.lang = "en";
     } else {
         idiomaAtual = "pt";
         btnIdioma.textContent = "EN"
+        document.documentElement.lang = "pt";
     }
 
     elementos.forEach((elemento) => {
@@ -42,8 +44,8 @@ btnIdioma.addEventListener('click', () => {
         } else {
             elemento.textContent = elemento.dataset.en;
         }
-    })
-})
+    });
+});
 
 const secoes = document.querySelectorAll('section');
 const linksMenu = document.querySelectorAll('header ul li a');
@@ -80,51 +82,56 @@ function typewriter(elemento) {
 
 // TYPEWRITER NO H1 (repete infinito)
 const h1 = document.querySelector('#hero h1');
-const textoH1 = h1.textContent;
-h1.textContent = '';
-let i = 0;
-let apagando = false;
-let esperando = false;
+if (h1) {
+    const textoH1 = h1.textContent;
+    h1.textContent = '';
+    let i = 0;
+    let apagando = false;
+    let esperando = false;
 
-setInterval(() => {
-    if (apagando) {
-        h1.textContent = textoH1.substring(0, i);
-        i--;
-        if (i < 0) {
-            apagando = false;
-            esperando = false;
+    setInterval(() => {
+        if (apagando) {
+            h1.textContent = textoH1.substring(0, i);
+            i--;
+            if (i < 0) {
+                apagando = false;
+                esperando = false;
+            }
+        } else {
+            h1.textContent = textoH1.substring(0, i);
+            if (i <= textoH1.length) i++;
+            if (i > textoH1.length && !esperando) {
+                esperando = true;
+                setTimeout(() => {
+                    apagando = true;
+                }, 800);
+            }
         }
-    } else {
-        h1.textContent = textoH1.substring(0, i);
-        if (i <= textoH1.length) i++;
-        if (i > textoH1.length && !esperando) {
-            esperando = true;
-            setTimeout(() => {
-                apagando = true;
-            }, 800);
-        }
-    }
-}, 100);
+    }, 100);
+}
 
+// FORMULARIO
 const form = document.querySelector('#form-contato');
 
-form.addEventListener('submit', async (evento) => {
-    evento.preventDefault();
+if (form) {
+    form.addEventListener('submit', async (evento) => {
+        evento.preventDefault();
 
-    const resposta = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        const resposta = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (resposta.ok) {
+            // envio bem sucedido
+            form.reset(); // limpa o formulário
+            alert('Mensagem enviada com sucesso!');
+        } else {
+            alert('Ops, algo deu errado. Tente novamente!');
+        }
     });
-
-    if (resposta.ok) {
-        // envio bem sucedido
-        form.reset(); // limpa o formulário
-        alert('Mensagem enviada com sucesso!');
-    } else {
-        alert('Ops, algo deu errado. Tente novamente!');
-    }
-});
+}
 
 const btnMenu = document.querySelector('#btn-menu');
 const menu = document.querySelector('header ul');
@@ -148,42 +155,46 @@ document.addEventListener('click', (evento) => {
 // CARROSSEL
 const track = document.querySelector('.carrossel-track');
 const slides = document.querySelectorAll('.carrossel-slide');
-const tracinhos = document.querySelectorAll('.tracinho');
-const setaPrev = document.querySelector('.seta-prev');
-const setaNext = document.querySelector('.seta-next');
-let slideAtual = 0;
 
-function trocarSlide() {
-    track.style.transform = `translateX(${slideAtual * -100}%)`;
+if (track) {
+    const tracinhos = document.querySelectorAll('.tracinho');
+    const setaPrev = document.querySelector('.seta-prev');
+    const setaNext = document.querySelector('.seta-next');
+    let slideAtual = 0;
 
-    tracinhos.forEach(tracinho => tracinho.classList.remove('ativo'));
-    tracinhos[slideAtual].classList.add('ativo');
+    function trocarSlide() {
+        track.style.transform = `translateX(${slideAtual * -100}%)`;
 
+        tracinhos.forEach(tracinho => tracinho.classList.remove('ativo'));
+        tracinhos[slideAtual].classList.add('ativo');
+
+    }
+
+    setaNext.addEventListener('click', () => {
+        if (slideAtual < slides.length - 1) {
+            slideAtual++;
+        } else {
+                slideAtual = 0;
+        }
+        trocarSlide();
+    });
+
+    setaPrev.addEventListener('click', () => {
+        if (slideAtual === 0) {
+            slideAtual = slides.length - 1;
+        } else {
+            slideAtual--;
+        }
+        trocarSlide();
+    });
+
+    setInterval(() => {
+        if (slideAtual < slides.length - 1) {
+            slideAtual++;
+        } else {
+            slideAtual = 0;
+        }
+        trocarSlide()
+    }, 4000);
 }
 
-setaNext.addEventListener('click', () => {
-    if (slideAtual < slides.length - 1) {
-        slideAtual++;
-    } else {
-            slideAtual = 0;
-    }
-    trocarSlide();
-});
-
-setaPrev.addEventListener('click', () => {
-    if (slideAtual === 0) {
-        slideAtual = slides.length - 1;
-    } else {
-        slideAtual--;
-    }
-    trocarSlide();
-});
-
-setInterval(() => {
-    if (slideAtual < slides.length - 1) {
-        slideAtual++;
-    } else {
-        slideAtual = 0;
-    }
-    trocarSlide()
-}, 4000);
