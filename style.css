@@ -984,6 +984,14 @@ footer .redes-sociais a:hover {
         flex-direction: column;
     }
 
+    .carrossel {
+        width: 95%;
+    }
+
+    .carrossel-slide {
+        height: 300px;
+    }
+
     .grid-projetos {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1025,6 +1033,10 @@ footer .redes-sociais a:hover {
 
     .tag-texto {
         font-size: 0.9rem;
+    }
+
+    .carrossel-slide {
+        height: 200px;
     }
 
     .grid-projetos {
