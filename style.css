@@ -983,6 +983,14 @@ footer .redes-sociais a:hover {
     .categoria-2 .card {
         flex-direction: column;
     }
+
+    .grid-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-projeto img {
+        height: 150px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1017,5 +1025,13 @@ footer .redes-sociais a:hover {
 
     .tag-texto {
         font-size: 0.9rem;
+    }
+
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-projeto img {
+        height: 200px;
     }
 }
