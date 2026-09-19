@@ -8,6 +8,54 @@ const setaModalPrev = document.querySelector('.seta-modal-prev');
 const setaModalNext = document.querySelector('.seta-modal-next');
 
 const projetos = {
+    'kairo': {
+        nome: 'Kairo',
+        descricao: {
+            pt: 'App de gestão para assistentes virtuais e freelancers, nascido da minha própria rotina de trabalho. Reúne em um só lugar o que antes ficava espalhado entre Clockify, Notion e Google Sheets: registro de tempo, tarefas por cliente e controle financeiro. Meu primeiro projeto com backend real.',
+            en: 'Management app for virtual assistants and freelancers, born from my own work routine. It brings together in one place what used to be scattered across Clockify, Notion and Google Sheets: time tracking, client tasks and financial control. My first project with a real backend.'
+        },
+        link: 'https://nathaliadebona.github.io/kairo/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['Multi-páginas'],
+                en: ['Multi-page']
+            }
+        }
+    },
+
+    'vanity': {
+        nome: 'Vanity',
+        descricao: {
+            pt: 'App de reviews de produtos de beleza — a ideia veio de uma amiga e eu amei tanto que resolvi construir. Meu projeto mais desafiador até agora e os primeiros passos reais em backend: cadastro e login de usuários, perfis, avaliações e muito mais. A estética é tudo que eu gosto — e as funcionalidades, tudo que nunca tinha feito antes.',
+            en: 'Beauty product review app — the idea came from a friend and I loved it so much I decided to build it. My most challenging project yet and my first real steps in backend: user registration and login, profiles, reviews and much more. The aesthetic is everything I love — and the features, everything I had never done before.'
+        },
+        link: 'https://nathaliadebona.github.io/vanity/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['Firebase', 'Multi-páginas'],
+                en: ['Firebase', 'Multi-page']
+            }
+        }
+    },
+
+    'cherry-pop': {
+        nome: 'Cherry Pop',
+        descricao: {
+            pt: 'Loja fictícia de sorvetes e doces estilo retrô americano com visual bem diferente de tudo que havia feito antes. Além do carrinho de compras, trouxe duas funcionalidades inéditas: um quiz de personalidade que indica o sorvete ideal e um monte-seu-sundae interativo.',
+            en: 'Fictional retro American-style ice cream and candy shop with a look very different from anything I had done before. In addition to the shopping cart, I brought two brand-new features: a personality quiz that suggests your ideal ice cream and an interactive build-your-own-sundae.'
+        },
+        link: 'https://nathaliadebona.github.io/cherry-pop/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['localStorage', 'Multi-páginas'],
+                en: ['localStorage', 'Multi-page']
+            }
+        }
+    },
+
     'holly-desserts': {
         nome: 'Holly Desserts',
         descricao: {

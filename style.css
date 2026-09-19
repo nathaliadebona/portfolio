@@ -343,11 +343,64 @@ header.scrolled {
 
 .carrossel-slide {
     min-width: 100%;
-    height: 400px;
     position: relative;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor-artic-daisy);
+    border-radius: 10px;
 }
 
-.carrossel-slide img {
+/* Laptop mockup */
+.laptop-mockup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    max-width: 560px;
+    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15));
+}
+
+.laptop-tela {
+    width: 100%;
+    background: #1a1a1a;
+    border-radius: 8px 8px 0 0;
+    padding: 8px 8px 0;
+}
+
+.laptop-camera {
+    width: 6px;
+    height: 6px;
+    background: #444;
+    border-radius: 50%;
+    margin: 0 auto 6px;
+}
+
+.laptop-tela img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 4px 4px 0 0;
+    display: block;
+}
+
+.laptop-base {
+    width: 100%;
+    height: 12px;
+    background: linear-gradient(180deg, #2a2a2a, #1a1a1a);
+    border-radius: 0 0 4px 4px;
+}
+
+.laptop-pe {
+    width: 40%;
+    height: 6px;
+    background: #2e2e2e;
+    border-radius: 0 0 6px 6px;
+}
+
+.carrossel-slide > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -367,14 +420,15 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.75); 
 }
 
 .overlay::before {
@@ -384,7 +438,7 @@ header.scrolled {
     opacity: 0.8;
 }
 
-.carrossel-slide:hover .overlay {
+.laptop-mockup:hover .overlay {
     opacity: 1;
 }
 
@@ -429,11 +483,11 @@ header.scrolled {
 }
 
 .seta-prev {
-    left: 1rem;
+    left: 15%;
 }
 
 .seta-next {
-    right: 1rem;
+    right: 15%;
 }
 
 .seta:hover {
@@ -675,6 +729,7 @@ footer .redes-sociais a:hover {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    object-position: top;
     border-radius: 0 10px 0 0;
 }
 
