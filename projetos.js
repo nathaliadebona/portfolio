@@ -280,6 +280,86 @@ const projetos = {
         }
     },
 
+    'devpocket': {
+        nome: 'DevPocket',
+        descricao: {
+            pt: 'Guia de referência rápida para desenvolvedores front-end, com snippets de HTML, CSS e JavaScript organizados por categoria. Permite buscar por palavra-chave, copiar o código com um clique e favoritar os snippets mais usados — tudo salvo no localStorage. Um projeto utilitário que nasceu da própria rotina de estudos.',
+            en: 'A quick reference guide for front-end developers, with HTML, CSS and JavaScript snippets organized by category. Allows searching by keyword, copying code with one click and bookmarking the most-used snippets — all saved to localStorage. A utility project born from the study routine itself.'
+        },
+        link: 'https://nathaliadebona.github.io/devpocket/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['localStorage', 'Página única'],
+                en: ['localStorage', 'Single page']
+            }
+        }
+    },
+
+    'frontend-quiz': {
+        nome: 'Frontend Quiz',
+        descricao: {
+            pt: 'Quiz interativo de múltipla escolha sobre HTML, CSS, JavaScript e acessibilidade, baseado num desafio do Frontend Mentor. Quatro temas com ícones e cores próprios, feedback visual imediato a cada resposta, placar ao final e tema claro/escuro. Foi onde aprendi a estruturar dados em JSON e a renderizar a interface dinamicamente a partir deles.',
+            en: 'An interactive multiple-choice quiz on HTML, CSS, JavaScript and accessibility, based on a Frontend Mentor challenge. Four themes with their own icons and colors, immediate visual feedback on each answer, a final score and light/dark theme. This is where I learned to structure data in JSON and render the interface dynamically from it.'
+        },
+        link: 'https://nathaliadebona.github.io/frontend-quiz/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['Página única'],
+                en: ['Single page']
+            }
+        }
+    },
+
+    'moody': {
+        nome: 'Moody',
+        descricao: {
+            pt: 'App de rastreamento de humor diário com check-in em duas etapas (humor e horas de sono), saudação dinâmica por horário, diário pessoal com histórico filtrável e paginação, e gráfico mensal de barras com rolagem horizontal. Cor de fundo da página muda conforme o humor predominante dos últimos 5 registros. Todos os dados ficam no localStorage.',
+            en: 'A daily mood tracking app with a two-step check-in (mood and sleep hours), time-based dynamic greeting, a personal journal with filterable history and pagination, and a monthly bar chart with horizontal scroll. The page background color changes according to the predominant mood from the last 5 entries. All data is stored in localStorage.'
+        },
+        link: 'https://nathaliadebona.github.io/moody/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['localStorage', 'Multi-páginas'],
+                en: ['localStorage', 'Multi-page']
+            }
+        }
+    },
+
+    'password-generator': {
+        nome: 'Password Generator',
+        descricao: {
+            pt: 'Gerador de senhas customizável baseado num desafio do Frontend Mentor: escolha o tamanho (5 a 20 caracteres) e os tipos de caracteres, veja o nível de força em quatro graus (muito fraca a forte) com texto e barras coloridas, e copie com um clique. Slider com preenchimento progressivo até o polegar, tema escuro, layout responsivo e acessibilidade básica.',
+            en: 'A customizable password generator based on a Frontend Mentor challenge: choose the length (5 to 20 characters) and character types, see the strength level in four grades (too weak to strong) with text and colored bars, and copy with one click. Slider with progressive fill up to the thumb, dark theme, responsive layout and basic accessibility.'
+        },
+        link: 'https://nathaliadebona.github.io/password-generator/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['Página única'],
+                en: ['Single page']
+            }
+        }
+    },
+
+    'patinhas-e-cia': {
+        nome: 'Patinhas & Cia',
+        descricao: {
+            pt: 'Sistema de agendamento para um pet shop fictício com duas frentes: uma área para tutores navegarem pelos serviços e marcarem horários, e um painel da equipe com login simulado para gerenciar a agenda diária, status e pagamentos. Horários disponíveis calculados a partir da duração do serviço e horário de funcionamento, com domingos e datas passadas bloqueados. Layout mobile-first com animações que respeitam prefers-reduced-motion.',
+            en: 'A scheduling system for a fictional pet shop with two sides: a tutor area to browse services and book time slots, and a staff panel with a simulated login to manage the daily agenda, status and payments. Available slots calculated from the service duration and opening hours, with Sundays and past dates blocked. Mobile-first layout with animations that respect prefers-reduced-motion.'
+        },
+        link: 'https://nathaliadebona.github.io/patinhas-e-cia/',
+        tags: {
+            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
+            texto: {
+                pt: ['localStorage', 'Multi-páginas'],
+                en: ['localStorage', 'Multi-page']
+            }
+        }
+    },
+
     'focus-flow': {
         nome: 'Focus & Flow',
         descricao: {
