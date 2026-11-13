@@ -1,12 +1,14 @@
 :root {
-    --cor-artic-daisy: #EFEBCE; /* Fundo principal */
-    --cor-olive-petal: #A3A380; /* Destaques / botões */
-    --cor-rose-blush: #D8A48F; /* Acento suave */
-    --cor-textos: #3a3a2e; /* Textos */
+    --cor-fundo: #FBF3EA;
+    --cor-texto: #2B1F1A;
+    --cor-texto-suave: #6B574D;
+    --cor-detalhes: #F2C9C0;
+    --cor-destaque: #A8472A;
+    --cor-destaque-escuro: #7A2F18;
     --cor-dourado: #C9A84C;
 
-    --fonte-titulo: 'Lora', serif;
-    --fonte-corpo: 'Jost', sans-serif;
+    --fonte-titulo: 'Fraunces', serif;
+    --fonte-corpo: 'DM Sans', sans-serif;
 }
 
 html {
