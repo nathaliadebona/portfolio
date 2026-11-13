@@ -30,12 +30,19 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--fonte-corpo);
-    color: var(--cor-textos);
-    background-color: var(--cor-artic-daisy);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
 }
 
 a {
     text-decoration: none;
+    color: var(--cor-destaque);
+}
+
+a:hover {
+    color: var(--cor-destaque-escuro);
 }
 
 img {
@@ -45,50 +52,37 @@ img {
 
 h1, h2, h3, h4 {
     font-family: var(--fonte-titulo);
+    font-weight: 400;
+    letter-spacing: -0.02em;
 }
 
 .btn {
-    display: inline-block;
-    color: var(--cor-textos);
-    padding: 10px 24px;
+    display: inline-flex;
+    align-items: center;
     align-self: flex-start;
+    min-height: 3.25rem;
+    padding: 0 2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
     cursor: pointer;
-    border-radius: 50px;
-    background-color: var(--cor-rose-blush);
-    animation: flutuar 2s ease-in-out infinite;
-}
-
-@keyframes flutuar {
-    0% { transform: translateY(0);}
-    50% { transform: translateY(-10px);}
-    100% { transform: translateY(0);}
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    animation-play-state: paused;
-    background-color: var(--cor-olive-petal);
-    color: var(--cor-artic-daisy);
+    color: var(--cor-fundo);
+    background-color: var(--cor-destaque);
 }
-
-#sobre h2::after,
-#habilidades h2::after,
-#projetos h2::after,
-#contato h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 2px;
-    background-color: var(--cor-rose-blush);
-    margin: 12px auto 0;
-}
-
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--cor-olive-petal);
     z-index: 100;
+    border-bottom: 0.0625rem solid var(--cor-detalhes);
+    background-color: var(--cor-fundo); 
 }
 
 header nav {
@@ -102,7 +96,7 @@ header nav span {
     font-family: var(--fonte-titulo);
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--cor-artic-daisy);
+    color: var(--cor-texto);
 }
 
 header ul {
@@ -113,7 +107,7 @@ header ul {
 
 header ul li a {
     font-size: 1.2rem;
-    color: var(--cor-textos);
+    color: var(--cor-texto);
     transition: color 0.3s ease;
 }
 
@@ -135,7 +129,7 @@ header ul li a.ativo::after {
 }
 
 header ul li a:hover {
-    color: var(--cor-artic-daisy);
+    color: var(--cor-destaque);
 }
 
 header nav button {
@@ -339,13 +333,6 @@ header.scrolled {
     margin-right: 8px;
     font-size: 0.8rem;
     vertical-align: middle;
-}
-
-.divisor {
-    text-align: center;
-    color: var(--cor-rose-blush);
-    font-size: 1.5rem;
-    padding: 2rem 0;
 }
 
 /* PROJETOS */
