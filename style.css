@@ -264,6 +264,25 @@ header nav button:hover {
     color: var(--cor-texto);
 }
 
+/* FAIXA ENFEITE */
+.faixa {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 2.5rem;
+    padding: 1.75rem 5rem;
+    border-top: 0.09375rem solid var(--cor-texto);
+    border-bottom: 0.09375rem solid var(--cor-texto);
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.faixa-enfeite {
+    color: var(--cor-destaque);
+}
+
 #sobre {
     display: flex;
     flex-direction: column;
