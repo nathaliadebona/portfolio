@@ -5,6 +5,9 @@
     --cor-detalhes: #F2C9C0;
     --cor-destaque: #A8472A;
     --cor-destaque-escuro: #7A2F18;
+    --cor-areia: #EBD9B8;
+    --cor-argila: #E3C4B2;
+    --cor-pessego: #F0D2C8;
     --cor-dourado: #C9A84C;
 
     --fonte-titulo: 'Fraunces', serif;
@@ -409,12 +412,36 @@ header nav button:hover {
     display: flex;
     flex-direction: column;
     flex: 1 1 32.5rem;
-    gap: 1.125rem;
+    gap: 1.25rem;
     min-width: 0;
     padding: 1.5rem;
     border-radius: 1.75rem;
     color: var(--cor-texto);
     background-color: var(--cor-detalhes);
+    transition: transform 0.25s ease;
+}
+
+.card-destaque:nth-child(2) {
+    background-color: var(--cor-areia);
+}
+
+.card-destaque:nth-child(3) {
+    background-color: var(--cor-argila);
+}
+
+.card-destaque:nth-child(4) {
+    background-color: var(--cor-pessego);
+}
+
+.card-destaque:hover {
+    color: var(--cor-texto);
+    transform: translateY(-0.375rem) rotate(-0.6deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-destaque:hover {
+        transform: none;
+    }
 }
 
 .card-destaque img {
