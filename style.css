@@ -568,25 +568,18 @@ header nav button:hover {
 
 footer {
     display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    background-color: var(--cor-olive-petal);
-    padding: 30px 0;
-    color: var(--cor-artic-daisy);
-    text-align: center;
-}
-
-footer p {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 3.5rem 5rem 3rem;
     font-size: 1rem;
-    font-family: var(--fonte-corpo);
+    color: var(--cor-texto-suave);
 }
 
-footer .redes-sociais a {
-    color: var(--cor-artic-daisy);
-}
-
-footer .redes-sociais a:hover {
-    color: var(--cor-rose-blush);
+footer .redes-sociais {
+    display: flex;
+    gap: 1.5rem;
 }
 
 #btn-topo {
