@@ -584,19 +584,23 @@ footer .redes-sociais {
 
 #btn-topo {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    background-color: var(--cor-rose-blush);
-    cursor: pointer;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.25rem;
+    height: 3.25rem;
     border: none;
-    font-size: 2rem;
-    color: var(--cor-artic-daisy);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+    cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+#btn-topo:hover {
+    background-color: var(--cor-destaque);
 }
 
 #btn-topo.visivel {
