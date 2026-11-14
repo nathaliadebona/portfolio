@@ -122,49 +122,5 @@ document.addEventListener('click', (evento) => {
     }
 });
 
-// CARROSSEL
-const track = document.querySelector('.carrossel-track');
-const slides = document.querySelectorAll('.carrossel-slide');
 
-if (track) {
-    const tracinhos = document.querySelectorAll('.tracinho');
-    const setaPrev = document.querySelector('.seta-prev');
-    const setaNext = document.querySelector('.seta-next');
-    let slideAtual = 0;
-
-    function trocarSlide() {
-        track.style.transform = `translateX(${slideAtual * -100}%)`;
-
-        tracinhos.forEach(tracinho => tracinho.classList.remove('ativo'));
-        tracinhos[slideAtual].classList.add('ativo');
-
-    }
-
-    setaNext.addEventListener('click', () => {
-        if (slideAtual < slides.length - 1) {
-            slideAtual++;
-        } else {
-                slideAtual = 0;
-        }
-        trocarSlide();
-    });
-
-    setaPrev.addEventListener('click', () => {
-        if (slideAtual === 0) {
-            slideAtual = slides.length - 1;
-        } else {
-            slideAtual--;
-        }
-        trocarSlide();
-    });
-
-    setInterval(() => {
-        if (slideAtual < slides.length - 1) {
-            slideAtual++;
-        } else {
-            slideAtual = 0;
-        }
-        trocarSlide()
-    }, 4000);
-}
 
