@@ -231,6 +231,7 @@ header nav button:hover {
 .hero-foto {
     position: relative;
     display: flex;
+    flex-shrink: 0;
     width: 26.25rem;
     height: 26.25rem;
     max-width: 100%;
