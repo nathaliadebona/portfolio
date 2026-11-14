@@ -308,104 +308,70 @@ header nav button:hover {
     font-size: 1.25rem;
 }
 
+/* HABILIDADES */
 #habilidades {
-    padding: 80px 48px;
+    padding: 0 5rem 7rem;
+}
+
+.habilidades-bloco {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 3.5rem;
+    border-radius: 2.25rem;
+    background-color: var(--cor-detalhes);
 }
 
 #habilidades h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    line-height: 1;
+    font-size: 3.5rem;
 }
 
 .habilidades-grid {
-    display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr;
-    gap: 0 2.5rem;
-    max-width: 760px;
-    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
     align-items: start;
-}
-
-.hab-divisor {
-    width: 1px;
-    background-color: var(--cor-olive-petal);
-    opacity: 0.3;
-    align-self: stretch;
 }
 
 .hab-coluna {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    flex: 1 1 17.5rem;
+    align-items: flex-start;
+    gap: 1rem;
+    min-width: 0;
 }
 
 .hab-cat-titulo {
-    font-family: var(--fonte-titulo);
-    font-size: 1.1rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-align: left;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--cor-rose-blush);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-align: center;
+    color: var(--cor-destaque-escuro);
 }
 
-/* Ícones — coluna Técnicas */
-.hab-icones {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.hab-icone-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-}
-
-.hab-icone-item i {
-    font-size: 2.4rem;
-    color: var(--cor-textos);
-    opacity: 0.75;
-    transition: opacity 0.2s ease, color 0.2s ease;
-}
-
-.hab-icone-item:hover i {
-    opacity: 1;
-    color: var(--cor-olive-petal);
-}
-
-.hab-icone-item span {
-    font-size: 0.68rem;
-    color: var(--cor-olive-petal);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-/* Lista — colunas Ferramentas e Pessoais */
 .hab-lista {
-    list-style: none;
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    align-self: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
 }
 
 .hab-lista li {
-    font-size: 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 1.25rem;
+    border-radius: 999px;
     line-height: 1.5;
-    color: var(--cor-textos);
-}
-
-.hab-lista li::before {
-    content: '✦';
-    color: var(--cor-rose-blush);
-    margin-right: 8px;
-    font-size: 0.8rem;
-    vertical-align: middle;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
 }
 
 /* PROJETOS */
