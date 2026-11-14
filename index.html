@@ -221,40 +221,37 @@
         </section>
 
         <section id="contato">
-            <h2 data-pt="Vamos conversar?" data-en="Let's talk?">
-                Vamos conversar?
-            </h2>
+            <div class="contato-intro">
+                <h2 data-pt="Vamos conversar?" data-en="Let's talk?">
+                    Vamos conversar?
+                </h2>
 
-            <p data-pt="Seja para um projeto, uma troca ou só para dizer oi — estou por aqui. 😊"
-                data-en="Whether it’s for a project, an exchange, or just to say hi — I’m around. 😊">
-                Seja para um projeto, uma troca ou só para dizer oi — estou por aqui. 😊
-            </p>
+                <p data-pt="Seja para um projeto, uma troca ou só para dizer oi, estou por aqui."
+                    data-en="Whether it’s for a project, an exchange, or just to say hi, I’m around.">
+                    Seja para um projeto, uma troca ou só para dizer oi, estou por aqui.
+                </p>
+            </div>
 
             <form action="https://formspree.io/f/mzdllqvn" method="POST" id="form-contato">
+                <div class="campo">
+                    <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
 
-                <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome"
-                        data-placeholder-pt="Seu nome" data-placeholder-en="Your name">
+                <div class="campo">
+                    <label for="email" data-pt="E-mail" data-en="E-mail">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </div>
 
-                <label for="email" data-pt="E-mail" data-en="E-mail">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com"
-                        data-placeholder-pt="seu@email.com" data-placeholder-en="your@email.com">
-
-                <label for="mensagem" data-pt="Mensagem"
-                        data-en="Message">
-                        Mensagem</label>
-                <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aqui" rows="5"
-                        data-placeholder-pt="Escreva sua mensagem aqui"
-                        data-placeholder-en="Write your message here">
-                </textarea>
+                <div class="campo">
+                    <label for="mensagem" data-pt="Mensagem"
+                            data-en="Message">
+                            Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="5"></textarea>
+                </div>
 
                 <button type="submit" data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</button>
             </form>
-
-            <div class="redes-sociais">
-                <a href="https://github.com/nathaliadebona"><i class="fa-brands fa-github"></i> Github</a>
-                <a href="https://www.linkedin.com/in/nathaliadalila/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
         </section>
     </main>
 

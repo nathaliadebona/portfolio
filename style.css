@@ -469,79 +469,101 @@ header nav button:hover {
     color: var(--cor-destaque-escuro);
 }
 
-/* Seção contato */
-
+/* CONTATO */
 #contato {
-    padding: 80px 48px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 3.5rem;
+    margin: 0 5rem;
+    padding: 4.5rem 3.5rem;
+    border-radius: 2.25rem;
+    color: var(--cor-fundo);
+    background-color: var(--cor-texto);
+}
+
+.contato-intro {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 22.5rem;
+    min-width: 0;
+    gap: 1.25rem;
 }
 
 #contato h2 {
-    font-size: 2.5rem;
-    padding-bottom: 2rem;
+    line-height: 1.05;
+    font-size: 4rem;
 }
 
 #contato p {
-    font-size: 1.1rem;
-    padding-bottom: 2rem;
+    font-size: 1.25rem;
+    color: var(--cor-detalhes);
 }
 
 #contato form {
-    max-width: 600px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    flex: 1 1 27.5rem;
     gap: 1rem;
+    min-width: 0;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 #contato label {
     text-align: left;
-    font-family: var(--fonte-titulo);
-    font-size: 1.2rem;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 #contato input,
 #contato textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--cor-olive-petal);
-    background-color: transparent;
-    border-radius: 8px;
+    padding: 0 1.25rem;
+    border: none;
+    border-radius: 1rem;
     font-family: var(--fonte-corpo);
+    font-size: 1.125rem;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
 }
+
+#contato input {
+    min-height: 3.25rem;
+}
+
+#contato textarea {
+    padding: 1rem 1.25rem;
+    resize: vertical;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    outline: 0.1875rem solid var(--cor-detalhes);
+}
+
 
 #contato button {
     display: inline-block;
-    color: var(--cor-textos);
-    padding: 10px 24px;
-    align-self: center;
+    align-self: flex-start;
+    min-height: 3.5rem;
+    padding: 0 2.25rem;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    color: var(--cor-texto);
+    background-color: var(--cor-detalhes);
     cursor: pointer;
-    border: transparent;
-    border-radius: 50px;
-    background-color: var(--cor-rose-blush);
-    transition: 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 #contato button:hover {
-    background-color: var(--cor-olive-petal);
-    color: var(--cor-artic-daisy);
-}
-
-#contato .redes-sociais {
-    display: flex;
-    justify-content: center;
-    gap: 1.1rem;
-    margin-top: 1.5rem;
-}
-
-#contato .redes-sociais a {
-    color: var(--cor-textos);
-    font-size: 1.2rem;
-    transition: 0.3s ease;
-}
-
-#contato .redes-sociais a:hover {
-    color: var(--cor-olive-petal);
+    background-color: var(--cor-fundo);
 }
 
 footer {
