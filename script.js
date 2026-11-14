@@ -80,36 +80,6 @@ function typewriter(elemento) {
     }, 100);
 }
 
-// TYPEWRITER NO H1 (repete infinito)
-const h1 = document.querySelector('#hero h1');
-if (h1) {
-    const textoH1 = h1.textContent;
-    h1.textContent = '';
-    let i = 0;
-    let apagando = false;
-    let esperando = false;
-
-    setInterval(() => {
-        if (apagando) {
-            h1.textContent = textoH1.substring(0, i);
-            i--;
-            if (i < 0) {
-                apagando = false;
-                esperando = false;
-            }
-        } else {
-            h1.textContent = textoH1.substring(0, i);
-            if (i <= textoH1.length) i++;
-            if (i > textoH1.length && !esperando) {
-                esperando = true;
-                setTimeout(() => {
-                    apagando = true;
-                }, 800);
-            }
-        }
-    }, 100);
-}
-
 // FORMULARIO
 const form = document.querySelector('#form-contato');
 

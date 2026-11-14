@@ -39,25 +39,36 @@
     <main>
         <section id="hero">
             <div class="hero-texto">
-                <span data-pt="Olá, eu sou" data-en="Hi, I'm">
+                <span class="hero-saudacao" data-pt="Olá, eu sou" data-en="Hi, I'm">
                     Olá, eu sou
                 </span>
-                <h1>Nathália de Bona</h1>
+                
+                <h1>Nathália de Bona<span class="ponto">.</span></h1>
+                
                 <h2 data-pt="Desenvolvedora front-end criando experiências web bonitas e funcionais, um projeto de cada vez."
                     data-en="Front-end developer creating beautiful and functional web experiences, one project at a time.">
                     Desenvolvedora front-end criando experiências web bonitas e funcionais, um projeto de cada vez.
                 </h2>
-                <p data-pt="Ainda estou no começo da minha jornada, mas quero mostrar minha evolução durante esse tempo."
-                    data-en="I am still at the beginning of my journey, but I want to show my progress over this time.">
-                    Ainda estou no começo da minha jornada, mas quero mostrar minha evolução durante esse tempo.
-                </p>
-                <a href="#projetos" class="btn"
-                    data-pt="Ver projetos" data-en="See my work">
-                    Ver projetos
-                </a>
+        
+                <div class="hero-botoes">
+                    <a href="#projetos" class="btn"
+                        data-pt="Ver projetos" data-en="See my work">
+                        Ver projetos
+                    </a>
+
+                    <a href="#contato" class="btn btn-contorno"
+                        data-pt="Falar comigo" data-en="Talk to me">
+                        Falar comigo
+                    </a>
+                </div>
             </div>
 
-            <img src="imagens/nathalia.webp" alt="Foto de Nathália de Bona">
+            <div class="hero-foto">
+                <img src="imagens/nathalia.webp" alt="Foto de Nathália de Bona">
+            
+                <span aria-hidden="true" class="enfeite enfeite-estrela">✦</span>
+                <span aria-hidden="true" class="enfeite enfeite-brilho">✧</span>
+            </div>
         </section>
 
         <section id="sobre">
