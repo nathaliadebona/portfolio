@@ -200,15 +200,27 @@ const projetos = {
         destaque: true,
         imagem: 'imagens/projetos/glow-republic/hero.webp',
         descricao: {
-            pt: 'Site de uma marca de skincare vegano voltada ao público jovem. Oito páginas interligadas com modal de produtos, filtro por categoria, validação customizada de formulário, contador animado com IntersectionObserver e tag flutuante com @keyframes. Uma vitrine do meu crescimento com JavaScript.',
-            en: 'Website for a vegan skincare brand targeting young audiences. Eight interconnected pages with a product modal, category filter, custom form validation, animated counter with IntersectionObserver and floating tag with @keyframes. A showcase of my JavaScript growth.'
+            pt: 'Site de uma marca de skincare vegano voltada ao público jovem, evoluído para um e-commerce com aparência real. Oito páginas interligadas, com carrinho funcional salvo no localStorage, modal de produtos, filtro por categoria, barra de aviso e selos de confiança. Também tem validação customizada de formulário, contador animado com IntersectionObserver e tag flutuante com @keyframes. Uma vitrine do meu crescimento com JavaScript.',
+            en: 'Website for a vegan skincare brand targeting young audiences, evolved into an e-commerce site with a realistic look. Eight interconnected pages, with a working cart saved in localStorage, product modal, category filter, announcement bar and trust badges. It also has custom form validation, an animated counter with IntersectionObserver and a floating tag with @keyframes. A showcase of my JavaScript growth.'
         },
         link: 'https://nathaliadebona.github.io/glow-republic/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/glow-republic',
+        resumo: {
+            pt: 'Site de uma marca de skincare vegano com carrinho funcional, modal de produtos e filtro por categoria.',
+            en: 'Vegan skincare brand website with a working cart, product modal and category filter.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'IntersectionObserver'],
+        galeria: [
+            'imagens/projetos/glow-republic/galeria-1.webp',
+            'imagens/projetos/glow-republic/galeria-2.webp',
+            'imagens/projetos/glow-republic/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
-                pt: ['Animações', 'Multi-páginas'],
-                en: ['Animations', 'Multi-page']
+                pt: ['localStorage', 'Animações', 'Multi-páginas'],
+                en: ['localStorage', 'Animations', 'Multi-page']
             }
         }
     },
