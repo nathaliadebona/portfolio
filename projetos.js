@@ -522,4 +522,26 @@ function mostrarProjetos() {
     lista.innerHTML = html;
 }
 
+const chips = document.querySelectorAll('.chip');
+
+chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+        if (chip.dataset.filtro === 'mostrar') {
+            filtroMostrar = chip.dataset.valor;
+        } else {
+            filtroTipo = chip.dataset.valor;
+        }
+
+        const irmaos = chip.parentElement.querySelectorAll('.chip');
+
+        irmaos.forEach(irmao => {
+            irmao.setAttribute('aria-pressed', 'false');
+        });
+
+        chip.setAttribute('aria-pressed', 'true');
+
+        mostrarProjetos();
+    });
+});
+
 mostrarProjetos();
