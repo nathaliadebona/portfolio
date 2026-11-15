@@ -1,14 +1,21 @@
 const projetos = {
     'kairo': {
         nome: 'Kairo',
-        tipo: 'backend',
+        tipo: 'app',
         destaque: true,
         imagem: 'imagens/projetos/kairo/hero.webp',
         descricao: {
-            pt: 'App de gestão para assistentes virtuais e freelancers, nascido da minha própria rotina de trabalho. Reúne em um só lugar o que antes ficava espalhado entre Clockify, Notion e Google Sheets: registro de tempo, tarefas por cliente e controle financeiro. Meu primeiro projeto com backend real.',
-            en: 'Management app for virtual assistants and freelancers, born from my own work routine. It brings together in one place what used to be scattered across Clockify, Notion and Google Sheets: time tracking, client tasks and financial control. My first project with a real backend.'
+            pt: 'App de gestão para assistentes virtuais e freelancers, nascido da minha própria rotina de trabalho. Reúne em um só lugar o que antes ficava espalhado entre Clockify, Notion e Google Sheets: registro de tempo, tarefas por cliente e controle financeiro.',
+            en: 'Management app for virtual assistants and freelancers, born from my own work routine. It brings together in one place what used to be scattered across Clockify, Notion and Google Sheets: time tracking, client tasks and financial control.'
         },
         link: 'https://nathaliadebona.github.io/kairo/',
+        ano: 2026,
+        github: 'https://nathaliadebona.github.io/kairo',
+        resumo: {
+            pt: 'App para assistentes virtuais controlarem tempo, tarefas e fechamento financeiro por cliente, tudo em um só lugar.',
+            en: 'App for virtual assistants to track time, tasks and monthly billing per client, all in one place.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'Flatpickr'],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
