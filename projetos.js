@@ -494,19 +494,32 @@ btnFechar.addEventListener('click', () => {
 
 const lista = document.getElementById('lista-projetos');
 
-let html = '';
+let filtroMostrar = 'destaques';
+let filtroTipo = 'todos';
 
-Object.entries(projetos).forEach(([id, projeto]) => {
-    html += `
-      <a class="card-projeto" href="projeto.html?id=${id}">
-        <img src="${projeto.imagem}" alt="${projeto.nome}">
-        <div class="card-corpo">
-            <h3>${projeto.nome}</h3>
-            <span class="card-seta">→</span>
-        </div>
-        <span class="card-tag" data-pt="${tipos[projeto.tipo].pt}" data-en="${tipos[projeto.tipo].en}">${tipos[projeto.tipo].pt}</span>
-      </a>
-    `;
-});
+function mostrarProjetos() {
+    let html = '';
 
-lista.innerHTML = html;
+    const filtrados = Object.entries(projetos).filter(([id, projeto]) => {
+        return (filtroMostrar === 'todos' || projeto.destaque) && (filtroTipo === 'todos' || projeto.tipo === filtroTipo);
+    });
+
+    filtrados.forEach(([id, projeto]) => {
+        html += `
+        <a class="card-projeto" href="projeto.html?id=${id}">
+            <img src="${projeto.imagem}" alt="${projeto.nome}">
+            <div class="card-corpo">
+                <h3>${projeto.nome}</h3>
+                <span class="card-seta">→</span>
+            </div>
+            <span class="card-tag" data-pt="${tipos[projeto.tipo].pt}" data-en="${tipos[projeto.tipo].en}">${tipos[projeto.tipo].pt}</span>
+        </a>
+        `;
+    });
+
+    document.getElementById('contagem').textContent = `${filtrados.length} projetos`;
+
+    lista.innerHTML = html;
+}
+
+mostrarProjetos();
