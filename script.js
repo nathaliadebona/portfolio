@@ -25,8 +25,6 @@ btnTopo.addEventListener('click', () => {
 let idiomaAtual = "pt";
 const btnIdioma = document.querySelector('#toggle-idioma');
 
-const elementos = document.querySelectorAll('[data-pt]');
-
 btnIdioma.addEventListener('click', () => {
     if (idiomaAtual === "pt") {
         idiomaAtual = "en";
@@ -37,6 +35,8 @@ btnIdioma.addEventListener('click', () => {
         btnIdioma.textContent = "EN"
         document.documentElement.lang = "pt";
     }
+
+    const elementos = document.querySelectorAll('[data-pt]');
 
     elementos.forEach((elemento) => {
         if (idiomaAtual === "pt") {
