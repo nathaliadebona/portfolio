@@ -96,7 +96,7 @@ header nav {
     padding: 1.75rem 5rem;
 }
 
-header nav span {
+header nav > span {
     font-family: var(--fonte-titulo);
     font-size: 1.75rem;
     font-weight: 400;
@@ -617,7 +617,7 @@ footer .redes-sociais {
         padding: 1.25rem 1.5rem;
     }
 
-    header nav span {
+    header nav > span {
         font-size: 1.5rem;
     }
 
@@ -686,6 +686,100 @@ footer .redes-sociais {
         font-size: 1.0625rem;
         font-weight: 600;
         background: transparent;
+    }
+
+    #hero {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+        min-height: auto;
+        padding: 7rem 1.5rem 3.5rem;
+    }
+
+    #hero h1 {
+        font-size: 3.5rem;
+        line-height: 0.98;
+    }
+
+    #hero h2 {
+        font-size: 1.1875rem;
+    }
+
+    .hero-texto {
+        width: 100%;
+    }
+
+    .hero-saudacao {
+        font-size: 0.9375rem;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hero-botoes .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-foto {
+        align-self: center;
+        width: 16.25rem;
+        height: 16.25rem;
+    }
+
+    .enfeite-estrela {
+        top: 0;
+        right: 0;
+        font-size: 2.5rem;
+    }
+
+    .enfeite-brilho {
+        bottom: 0.5rem;
+        left: -0.25rem;
+        font-size: 1.625rem;
+    }
+
+    .faixa {
+        gap: 0.5rem 1.25rem;
+        padding: 1.25rem 1.5rem;
+        font-size: 1.375rem;
+    }
+
+    #sobre {
+        flex-direction: column;
+        gap: 1.75rem;
+        padding: 4.5rem 1.5rem;
+    }
+
+    #sobre h2 {
+        flex: none;
+        font-size: 3rem;
+    }
+
+    .sobre-texto {
+        flex: none;
+        gap: 1.75rem;
+        font-size: 1.125rem;
+    }
+
+    #habilidades {
+        padding: 0 1.5rem 4.5rem;
+    }
+
+    .habilidades-bloco {
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+        border-radius: 1.75rem;
+    }
+
+    #habilidades h2 {
+        font-size: 2.5rem;
+    }
+
+    .hab-lista li {
+        font-size: 1rem;
     }
 }
 
