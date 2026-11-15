@@ -68,6 +68,25 @@
     background-color: var(--cor-texto);
 }
 
+.projetos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 5rem 7rem;
+}
+
+.contagem {
+    font-family: var(--fonte-titulo);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(21.25rem, 1fr));
+    gap: 1.75rem;
+}
+
 /* Layout base */
 .projetos-main {
     padding-top: 100px;

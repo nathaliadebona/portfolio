@@ -467,4 +467,4 @@ document.querySelectorAll('.btn-detalhes').forEach(btn => {
 
 btnFechar.addEventListener('click', () => {
     modal.close();
-});
+});
