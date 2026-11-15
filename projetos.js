@@ -512,12 +512,16 @@ function mostrarProjetos() {
                 <h3>${projeto.nome}</h3>
                 <span class="card-seta">→</span>
             </div>
-            <span class="card-tag" data-pt="${tipos[projeto.tipo].pt}" data-en="${tipos[projeto.tipo].en}">${tipos[projeto.tipo].pt}</span>
+            <span class="card-tag" data-pt="${tipos[projeto.tipo].pt}" data-en="${tipos[projeto.tipo].en}">${tipos[projeto.tipo][idiomaAtual]}</span>
         </a>
         `;
     });
 
-    document.getElementById('contagem').textContent = `${filtrados.length} projetos`;
+    document.getElementById('contagem').textContent = `${filtrados.length} ${idiomaAtual === 'pt' ? 'projetos' : 'projects'}`;
+
+    if (filtrados.length === 0) {
+        html = `<p>${idiomaAtual === 'pt' ? 'Nenhum projeto com essa combinação. Tente tirar algum filtro.' : 'No projects match this combination. Try removing a filter.'}</p>`;
+    }
 
     lista.innerHTML = html;
 }

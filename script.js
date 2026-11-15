@@ -45,6 +45,10 @@ btnIdioma.addEventListener('click', () => {
             elemento.textContent = elemento.dataset.en;
         }
     });
+
+    if (typeof mostrarProjetos === 'function') {
+        mostrarProjetos();
+    }
 });
 
 const secoes = document.querySelectorAll('section');
