@@ -10,7 +10,7 @@ const projetos = {
         },
         link: 'https://nathaliadebona.github.io/kairo/',
         ano: 2026,
-        github: 'https://nathaliadebona.github.io/kairo',
+        github: 'https://github.com/nathaliadebona/kairo',
         resumo: {
             pt: 'App para assistentes virtuais controlarem tempo, tarefas e fechamento financeiro por cliente, tudo em um só lugar.',
             en: 'App for virtual assistants to track time, tasks and monthly billing per client, all in one place.'
