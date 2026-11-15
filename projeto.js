@@ -23,6 +23,33 @@ if (!projeto) {
     imagem.src = projeto.imagem;
     imagem.alt = projeto.nome;
 
+    let htmlInfos = `
+        <div>
+            <span class="info-rotulo" data-pt="Tipo" data-en="Type">Tipo</span>
+            <span class="info-valor" data-pt="${tipos[projeto.tipo].pt}" data-en="${tipos[projeto.tipo].en}">${tipos[projeto.tipo][idiomaAtual]}</span>
+        </div>
+    `;
+
+    if (projeto.ano) {
+        htmlInfos += `
+            <div>
+                <span class="info-rotulo" data-pt="Ano" data-en="Year">Ano</span>
+                <span class="info-valor">${projeto.ano}</span>
+            </div>
+        `;
+    }
+
+    if (projeto.tecnologias) {
+        htmlInfos += `
+            <div>
+                <span class="info-rotulo" data-pt="Tecnologias" data-en="Technologies">Tecnologias</span>
+                <span class="info-valor">${projeto.tecnologias.join(', ')}</span>
+            </div>
+        `;
+    }
+
+    document.getElementById('projeto-infos').innerHTML = htmlInfos;
+
     document.getElementById('projeto-descricao').innerHTML = `
         <p data-pt="${projeto.descricao.pt}" data-en="${projeto.descricao.en}">${projeto.descricao[idiomaAtual]}</p>
     `;
