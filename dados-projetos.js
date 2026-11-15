@@ -16,6 +16,11 @@ const projetos = {
             en: 'App for virtual assistants to track time, tasks and monthly billing per client, all in one place.'
         },
         tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'Flatpickr'],
+        galeria : [
+            'imagens/projetos/kairo/galeria-1.webp',
+            'imagens/projetos/kairo/galeria-2.webp',
+            'imagens/projetos/kairo/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {

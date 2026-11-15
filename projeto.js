@@ -66,6 +66,14 @@ if (!projeto) {
 
     document.getElementById('projeto-botoes').innerHTML = botoes;
 
+    if (projeto.galeria) {
+        document.getElementById('galeria-grade').innerHTML = projeto.galeria
+            .map((caminho, indice) => `<img src="${caminho}" alt="${projeto.nome} - tela ${indice + 1}">`)
+            .join('');
+    } else {
+        document.getElementById('projeto-galeria').style.display = 'none';
+    }
+
     document.title = `${projeto.nome} | Nathália de Bona`;
 }
 

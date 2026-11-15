@@ -142,3 +142,27 @@
 .projeto-links .btn-contorno:hover {
     color: var(--cor-fundo);
 }
+
+.projeto-galeria {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.projeto-galeria h2 {
+    font-size: 2.5rem;
+}
+
+.galeria-grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem;
+}
+
+.galeria-grade img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 1.25rem;
+}
