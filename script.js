@@ -116,19 +116,34 @@ if (form) {
 const btnMenu = document.querySelector('#btn-menu');
 const menu = document.querySelector('header ul');
 
+const rotuloMenu = btnMenu.querySelector('span');
+
+function atualizarRotuloMenu() {
+    const aberto = menu.classList.contains('aberto');
+
+    rotuloMenu.dataset.pt = aberto ? 'Fechar' : 'Menu';
+    rotuloMenu.dataset.en = aberto ? 'Close' : 'Menu';
+    rotuloMenu.textContent = rotuloMenu.dataset[idiomaAtual];
+
+    btnMenu.setAttribute('aria-expanded', aberto);
+}
+
 btnMenu.addEventListener('click', () => {
     menu.classList.toggle('aberto');
+    atualizarRotuloMenu();
 });
 
 linksMenu.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('aberto');
+        atualizarRotuloMenu();
     });
 });
 
 document.addEventListener('click', (evento) => {
     if (!menu.contains(evento.target) && !btnMenu.contains(evento.target)) {
         menu.classList.remove('aberto');
+        atualizarRotuloMenu();
     }
 });
 
