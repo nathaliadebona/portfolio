@@ -74,6 +74,13 @@ if (!projeto) {
         document.getElementById('projeto-galeria').style.display = 'none';
     }
 
+    const ids = Object.keys(projetos);
+    const posicao = ids.indexOf(id);
+    const proximoId = ids[(posicao + 1) % ids.length];
+
+    document.getElementById('proximo-nome').textContent = projetos[proximoId].nome;
+    document.getElementById('proximo-link').href = `projeto.html?id=${proximoId}`;
+
     document.title = `${projeto.nome} | Nathália de Bona`;
 }
 
