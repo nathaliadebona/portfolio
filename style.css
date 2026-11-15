@@ -781,6 +781,73 @@ footer .redes-sociais {
     .hab-lista li {
         font-size: 1rem;
     }
+
+    #projetos {
+        padding: 0 1.5rem 4.5rem;
+    }
+
+    .projetos-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    #projetos h2 {
+        font-size: 3rem;
+    }
+
+    .link-todos {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.75rem;
+    }
+
+    .projetos-destaque {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .card-destaque {
+        flex: none;
+        padding: 1rem;
+        border-radius: 1.5rem;
+    }
+
+    .card-destaque img {
+        height: 12.5rem;
+        border-radius: 1rem;
+    }
+
+    .card-nome {
+        font-size: 1.625rem;
+        line-height: 1.15;
+    }
+
+    #contato {
+        flex-direction: column;
+        gap: 1.75rem;
+        margin: 0 1.5rem;
+        padding: 2.5rem 1.5rem;
+        border-radius: 1.75rem;
+    }
+
+    .contato-intro,
+    #contato form {
+        flex: none;
+    }
+
+    #contato h2 {
+        font-size: 2.75rem;
+    }
+
+    #contato p {
+        font-size: 1.125rem;
+    }
+
+    #contato button {
+        align-self: stretch;
+    }
 }
 
 @media (max-width: 30rem) {
