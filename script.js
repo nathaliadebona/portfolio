@@ -23,18 +23,20 @@ btnTopo.addEventListener('click', () => {
 });
 
 let idiomaAtual = "pt";
-const btnIdioma = document.querySelector('#toggle-idioma');
+const botoesIdioma = document.querySelectorAll('#toggle-idioma, #toggle-idioma-mobile');
 
-btnIdioma.addEventListener('click', () => {
+function trocarIdioma() {
     if (idiomaAtual === "pt") {
         idiomaAtual = "en";
-        btnIdioma.textContent = "PT"
         document.documentElement.lang = "en";
     } else {
         idiomaAtual = "pt";
-        btnIdioma.textContent = "EN"
         document.documentElement.lang = "pt";
     }
+
+    botoesIdioma.forEach((botao) => {
+        botao.textContent = idiomaAtual === "pt" ? "EN" : "PT";
+    });
 
     const elementos = document.querySelectorAll('[data-pt]');
 
@@ -49,6 +51,10 @@ btnIdioma.addEventListener('click', () => {
     if (typeof mostrarProjetos === 'function') {
         mostrarProjetos();
     }
+}
+
+botoesIdioma.forEach((botao) => {
+    botao.addEventListener('click', trocarIdioma);
 });
 
 const secoes = document.querySelectorAll('section');

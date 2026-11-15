@@ -608,6 +608,10 @@ footer .redes-sociais {
     visibility: visible;
 }
 
+.item-idioma {
+    display: none;
+}
+
 @media (max-width: 48rem) {
     header nav {
         padding: 1.25rem 1.5rem;
@@ -662,6 +666,26 @@ footer .redes-sociais {
 
     header ul li a::after {
         display: none;
+    }
+
+    .item-idioma {
+        display: list-item;
+    }
+
+    #toggle-idioma {
+        display: none;
+    }
+
+    .item-idioma button {
+        width: 100%;
+        min-height: 3.5rem;
+        padding: 0;
+        border: none;
+        text-align: left;
+        font-family: inherit;
+        font-size: 1.0625rem;
+        font-weight: 600;
+        background: transparent;
     }
 }
 
