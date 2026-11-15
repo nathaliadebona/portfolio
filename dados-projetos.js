@@ -40,6 +40,18 @@ const projetos = {
             en: 'Beauty product review app — the idea came from a friend and I loved it so much I decided to build it. My most challenging project yet and my first real steps in backend: user registration and login, profiles, reviews and much more. The aesthetic is everything I love — and the features, everything I had never done before.'
         },
         link: 'https://nathaliadebona.github.io/vanity/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/vanity',
+        resumo: {       
+            pt: 'App de reviews de produtos de beleza, com cadastro, perfis e avaliações dos produtos que você usa.',
+            en: 'Beauty product review app with sign-up, profiles and reviews of the products you use.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+        galeria: [
+            'imagens/projetos/vanity/galeria-1.webp',
+            'imagens/projetos/vanity/galeria-2.webp',
+            'imagens/projetos/vanity/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
