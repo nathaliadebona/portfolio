@@ -199,7 +199,7 @@ header nav button:hover {
     font-size: 8rem;
 }
 
-#hero .ponto {
+.ponto {
     color: var(--cor-destaque);
 }
 

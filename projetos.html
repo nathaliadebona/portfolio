@@ -39,13 +39,51 @@
     </header>
 
     <main class="projetos-main">
-        <section class="projetos-page">
-            <h2 data-pt="Meus projetos" data-en="My projects">Meus projetos</h2>
-            <p data-pt="Uma linha do tempo da minha evolução como desenvolvedora"
-                data-en="A timeline of my evolution as a developer">
-                Uma linha do tempo da minha evolução como desenvolvedora
+        <section class="projetos-intro">
+            <h1><span data-pt="Projetos" data-en="Projects">Projetos</span><span class="ponto">.</span></h1>
+
+            <p data-pt="Mais de 20 projetos feitos do zero. Use os filtros para encontrar o que mais combina com você."
+                data-en="More than 20 projects built from scratch. Use the filters to find the one that best suits you.">
+                Mais de 20 projetos feitos do zero. Use os filtros para encontrar o que mais combina com você.
             </p>
-        
+        </section>
+
+        <div class="filtros">
+            <div class="filtro-linha">
+                <span class="filtro-rotulo" data-pt="Mostrar" data-en="Show">Mostrar</span>
+
+                <div class="filtro-chips">
+                    <button type="button" class="chip" data-filtro="mostrar" data-valor="destaques"
+                            aria-pressed="true" data-pt="Destaques" data-en="Featured">Destaques</button>
+
+                    <button type="button" class="chip" data-filtro="mostrar" data-valor="todos"
+                            aria-pressed="false" data-pt="Todos" data-en="All">Todos</button>
+                </div>
+            </div>
+
+            <div class="filtro-linha">
+                <span class="filtro-rotulo" data-pt="Tipo" data-en="Type">Tipo</span>
+
+                <div class="filtro-chips">
+                    <button type="button" class="chip" data-filtro="tipo" data-valor="todos"
+                            aria-pressed="true" data-pt="Todos" data-en="All">Todos</button>
+
+                    <button type="button" class="chip" data-filtro="tipo" data-valor="pagina-unica"
+                            aria-pressed="false" data-pt="Páginas únicas" data-en="Single pages">Páginas únicas</button>
+
+                    <button type="button" class="chip" data-filtro="tipo" data-valor="varias-paginas"
+                            aria-pressed="false" data-pt="Sites com várias páginas" data-en="Multi-page sites">Sites com várias páginas</button>
+
+                    <button type="button" class="chip" data-filtro="tipo" data-valor="app"
+                            aria-pressed="false" data-pt="Apps interativos" data-en="Interactive apps">Apps interativos</button>
+
+                    <button type="button" class="chip" data-filtro="tipo" data-valor="backend"
+                            aria-pressed="false" data-pt="Com backend" data-en="With backend">Com backend</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="projetos-page">
             <div class="categoria-projetos cat-1">
                 <h3 data-pt="✦ Primeiros passos ✦"
                     data-en="✦ First steps ✦">
