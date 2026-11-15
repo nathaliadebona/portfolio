@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Projeto | Nathália de Bona</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projeto.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <span>✦ nathália</span>
+
+            <ul>
+                <li><a href="index.html#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
+                <li><a href="index.html#habilidades" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
+                <li><a href="projetos.html" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+                <li><a href="index.html#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
+            </ul>
+
+            <div class="nav-botoes">
+                <button id="btn-menu" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <button id="toggle-idioma">EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="projeto-main">
+        <a href="projetos.html" class="voltar"
+            data-pt="← Todos os projetos" data-en="← All projects">
+            ← Todos os projetos
+        </a>
+
+        <section class="projeto-topo">
+            <span class="card-tag" id="projeto-tag"></span>
+            <h1 id="projeto-nome"></h1>
+            <p id="projeto-resumo"></p>
+        </section>
+
+        <img src="" alt="" id="projeto-imagem" class="projeto-imagem">
+
+        <div class="projeto-infos" id="projeto-infos"></div>
+
+        <section class="projeto-sobre">
+            <h2 data-pt="Sobre o projeto" data-en="About the project">Sobre o projeto</h2>
+
+            <div id="projeto-descricao"></div>
+        </section>
+
+        <div class="projeto-botoes" id="projeto-botoes"></div>
+    </main>
+
+    <footer>
+        <p>&#169; 2026 Nathália de Bona</p>
+
+        <div class="redes-sociais">
+            <a href="https://github.com/nathaliadebona">GitHub</a>
+            <a href="https://www.linkedin.com/in/nathaliadalila/">LinkedIn</a>
+        </div>
+    </footer>
+
+    <button id="btn-topo" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="dados-projetos.js"></script>
+    <script src="projeto.js"></script>
+</body>
+</html>
