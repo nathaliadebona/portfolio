@@ -608,10 +608,63 @@ footer .redes-sociais {
     visibility: visible;
 }
 
-@media (max-width: 768px) {
-    
+@media (max-width: 48rem) {
+    header nav {
+        padding: 1.25rem 1.5rem;
+    }
+
+    header nav span {
+        font-size: 1.5rem;
+    }
+
+    #btn-menu {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-botoes {
+        display: flex;
+        gap: 0.75rem;
+    }
+
+    header ul {
+        position: absolute;
+        top: 100%;
+        left: 1.5rem;
+        right: 1.5rem;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 0.5rem;
+        margin-left: 0;
+        padding: 0.5rem 1.5rem;
+        border-radius: 1.5rem;
+        background-color: var(--cor-detalhes);
+    }
+
+    header ul.aberto {
+        display: flex;
+    }
+
+    header ul li a {
+        display: flex;
+        align-items: center;
+        min-height: 3.5rem;
+        font-family: var(--fonte-titulo);
+        font-size: 1.5rem;
+        border-bottom: 0.09375rem solid rgba(43, 31, 26, 0.2);
+    }
+
+    header ul li:last-child a {
+        border-bottom: none;
+    }
+
+    header ul li a::after {
+        display: none;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     
 }
