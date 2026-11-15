@@ -451,6 +451,18 @@ const projetos = {
             en: 'A personal productivity dashboard with notes, calendar and statistics — inspired by the tools I use every day. Allows creating, editing and deleting notes and events, attaching files to the calendar and importing data via CSV or JSON. Everything stored locally via localStorage, with no server. Continuously evolving.'
         },
         link: 'https://nathaliadebona.github.io/focus-flow/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/focus-flow',
+        resumo: {
+            pt: 'Dashboard de produtividade pessoal com notas, calendário e importação de dados, tudo salvo no próprio navegador.',
+            en: 'Personal productivity dashboard with notes, calendar and data import, all saved in the browser itself.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'File API'],
+        galeria: [
+            'imagens/projetos/focus-flow/galeria-1.webp',
+            'imagens/projetos/focus-flow/galeria-2.webp',
+            'imagens/projetos/focus-flow/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
