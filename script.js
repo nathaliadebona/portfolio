@@ -75,21 +75,6 @@ const observer = new IntersectionObserver((entradas) => {
 
 secoes.forEach(secao => observer.observe(secao));
 
-// FUNÇÃO TYPEWRITER
-function typewriter(elemento) {
-    const texto = elemento.textContent;
-    elemento.textContent = '';
-    let i = 0;
-
-    const intervalo = setInterval(() => {
-        elemento.textContent += texto[i];
-        i++;
-        if (i === texto.length) {
-            clearInterval(intervalo);
-        }
-    }, 100);
-}
-
 // FORMULARIO
 const form = document.querySelector('#form-contato');
 
