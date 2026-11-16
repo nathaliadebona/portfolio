@@ -21,6 +21,12 @@
     color: var(--cor-texto-suave);
 }
 
+#btn-filtros,
+#limpar-filtros,
+#ver-projetos {
+    display: none;
+}
+
 .filtros {
     display: flex;
     flex-direction: column;
@@ -29,6 +35,12 @@
     padding: 2rem 2.5rem;
     border-radius: 2rem;
     background-color: var(--cor-detalhes);
+}
+
+.painel-filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .filtro-linha {
@@ -297,5 +309,77 @@
 
     .card-corpo h3 {
         font-size: 1.625rem;
-    }   
+    }
+
+    #btn-filtros {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0;
+        font-family: inherit;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: var(--cor-texto);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .seta-filtros {
+        margin-left: auto;
+        transition: transform 0.3s ease;
+    }
+
+    #filtros-ativos {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0.875rem;
+        color: var(--cor-fundo);
+        background: var(--cor-destaque);
+        border-radius: 999px;
+    }
+
+    #filtros-ativos:empty {
+        display: none;
+    }
+
+    .painel-filtros {
+        display: none;
+    }
+
+    .filtros.aberto .painel-filtros {
+        display: flex;
+    }
+
+    .filtros.aberto .seta-filtros {
+        transform: rotate(180deg);
+    }
+
+    .filtros.aberto #limpar-filtros,
+    .filtros.aberto #ver-projetos {
+        display: block;
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 999px;
+        cursor: pointer;
+    }
+
+    .filtros.aberto #ver-projetos {
+        color: var(--cor-fundo);
+        background: var(--cor-texto);
+        border: none;
+    }
+
+    .filtros.aberto #limpar-filtros {
+        color: var(--cor-texto);
+        background: none;
+        border: 0.0625rem solid var(--cor-texto);
+    }
 }

@@ -52,37 +52,41 @@
         </section>
 
         <div class="filtros">
-            <div class="filtro-linha">
-                <span class="filtro-rotulo" data-pt="Mostrar" data-en="Show">Mostrar</span>
+            <button type="button" id="btn-filtros" aria-expanded="false" aria-controls="painel-filtros">
+                <span data-pt="Filtros" data-en="Filters">Filtros</span>
+                <span id="filtros-ativos"></span>
+                <span class="seta-filtros" aria-hidden="true"><i class="fa-solid fa-caret-down"></i></span>
+            </button>
 
-                <div class="filtro-chips">
-                    <button type="button" class="chip" data-filtro="mostrar" data-valor="destaques"
-                            aria-pressed="true" data-pt="Destaques" data-en="Featured">Destaques</button>
-
-                    <button type="button" class="chip" data-filtro="mostrar" data-valor="todos"
-                            aria-pressed="false" data-pt="Todos" data-en="All">Todos</button>
+            <div id="painel-filtros" class="painel-filtros">
+                <div class="filtro-linha">
+                    <span class="filtro-rotulo" data-pt="Mostrar" data-en="Show">Mostrar</span>
+                    <div class="filtro-chips">
+                        <button type="button" class="chip" data-filtro="mostrar" data-valor="destaques"
+                                aria-pressed="true" data-pt="Destaques" data-en="Featured">Destaques</button>
+                        <button type="button" class="chip" data-filtro="mostrar" data-valor="todos"
+                                aria-pressed="false" data-pt="Todos" data-en="All">Todos</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="filtro-linha">
-                <span class="filtro-rotulo" data-pt="Tipo" data-en="Type">Tipo</span>
-
-                <div class="filtro-chips">
-                    <button type="button" class="chip" data-filtro="tipo" data-valor="todos"
-                            aria-pressed="true" data-pt="Todos" data-en="All">Todos</button>
-
-                    <button type="button" class="chip" data-filtro="tipo" data-valor="pagina-unica"
-                            aria-pressed="false" data-pt="Páginas únicas" data-en="Single pages">Páginas únicas</button>
-
-                    <button type="button" class="chip" data-filtro="tipo" data-valor="varias-paginas"
-                            aria-pressed="false" data-pt="Sites com várias páginas" data-en="Multi-page sites">Sites com várias páginas</button>
-
-                    <button type="button" class="chip" data-filtro="tipo" data-valor="app"
-                            aria-pressed="false" data-pt="Apps interativos" data-en="Interactive apps">Apps interativos</button>
-
-                    <button type="button" class="chip" data-filtro="tipo" data-valor="backend"
-                            aria-pressed="false" data-pt="Com backend" data-en="With backend">Com backend</button>
+                <div class="filtro-linha">
+                    <span class="filtro-rotulo" data-pt="Tipo" data-en="Type">Tipo</span>
+                    <div class="filtro-chips">
+                        <button type="button" class="chip" data-filtro="tipo" data-valor="todos"
+                                aria-pressed="true" data-pt="Todos" data-en="All">Todos</button>
+                        <button type="button" class="chip" data-filtro="tipo" data-valor="pagina-unica"
+                                aria-pressed="false" data-pt="Páginas únicas" data-en="Single pages">Páginas únicas</button>
+                        <button type="button" class="chip" data-filtro="tipo" data-valor="varias-paginas"
+                                aria-pressed="false" data-pt="Sites com várias páginas" data-en="Multi-page sites">Sites com várias páginas</button>
+                        <button type="button" class="chip" data-filtro="tipo" data-valor="app"
+                                aria-pressed="false" data-pt="Apps interativos" data-en="Interactive apps">Apps interativos</button>
+                        <button type="button" class="chip" data-filtro="tipo" data-valor="backend"
+                                aria-pressed="false" data-pt="Com backend" data-en="With backend">Com backend</button>
+                    </div>
                 </div>
+
+                <button type="button" id="limpar-filtros" data-pt="Limpar filtros" data-en="Reset filters">Limpar filtros</button>
+                <button type="button" id="ver-projetos"></button>
             </div>
         </div>
 

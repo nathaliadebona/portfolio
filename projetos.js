@@ -71,7 +71,22 @@ function mostrarProjetos() {
         `;
     });
 
-    document.getElementById('contagem').textContent = `${filtrados.length} ${idiomaAtual === 'pt' ? 'projetos' : 'projects'}`;
+    const palavraProjetos = idiomaAtual === 'pt' ? 'projetos' : 'projects';
+
+    document.getElementById('contagem').textContent = `${filtrados.length} ${palavraProjetos}`;
+    document.getElementById('ver-projetos').textContent = `${idiomaAtual === 'pt' ? 'Ver' : 'See'} ${filtrados.length} ${palavraProjetos}`;
+
+    let filtrosAtivos = 0;
+
+    if (filtroMostrar !== 'destaques') {
+        filtrosAtivos++;
+    }
+
+    if (filtroTipo !== 'todos') {
+        filtrosAtivos++;
+    }
+
+    document.getElementById('filtros-ativos').textContent = filtrosAtivos > 0 ? filtrosAtivos : '';
 
     if (filtrados.length === 0) {
         html = `<p>${idiomaAtual === 'pt' ? 'Nenhum projeto com essa combinação. Tente tirar algum filtro.' : 'No projects match this combination. Try removing a filter.'}</p>`;
@@ -82,6 +97,13 @@ function mostrarProjetos() {
 
 const chips = document.querySelectorAll('.chip');
 
+function atualizarChips() {
+    chips.forEach(chip => {
+        const valorAtual = chip.dataset.filtro === 'mostrar' ? filtroMostrar : filtroTipo;
+        chip.setAttribute('aria-pressed', chip.dataset.valor === valorAtual);
+    });
+}
+
 chips.forEach(chip => {
     chip.addEventListener('click', () => {
         if (chip.dataset.filtro === 'mostrar') {
@@ -90,16 +112,30 @@ chips.forEach(chip => {
             filtroTipo = chip.dataset.valor;
         }
 
-        const irmaos = chip.parentElement.querySelectorAll('.chip');
-
-        irmaos.forEach(irmao => {
-            irmao.setAttribute('aria-pressed', 'false');
-        });
-
-        chip.setAttribute('aria-pressed', 'true');
-
+        atualizarChips();
         mostrarProjetos();
     });
+});
+
+const btnFiltros = document.getElementById('btn-filtros');
+const filtros = document.querySelector('.filtros');
+
+btnFiltros.addEventListener('click', () => {
+    const filtroAberto = filtros.classList.toggle('aberto');
+    btnFiltros.setAttribute('aria-expanded', filtroAberto);
+});
+
+document.getElementById('limpar-filtros').addEventListener('click', () => {
+    filtroMostrar = 'destaques';
+    filtroTipo = 'todos';
+
+    atualizarChips();
+    mostrarProjetos();
+});
+
+document.getElementById('ver-projetos').addEventListener('click', () => {
+    filtros.classList.remove('aberto');
+    btnFiltros.setAttribute('aria-expanded', 'false');
 });
 
 mostrarProjetos();
