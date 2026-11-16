@@ -195,3 +195,98 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+
+@media (max-width: 48rem) {
+    .projeto-main {
+        padding: 5rem 1.5rem 3rem;
+        gap: 1.75rem;
+    }
+    
+    .voltar {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.75rem;
+    }
+
+    .projeto-topo h1 {
+        font-size: 4rem;
+        line-height: 0.98;
+    }
+
+    .projeto-topo p {
+        font-size: 1.1875rem;
+    }
+
+    .projeto-imagem {
+        height: 15rem;
+        border-radius: 1.5rem;
+    }
+
+    .projeto-infos {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 0;
+        border: none;
+    }
+
+    .projeto-infos div {
+        padding-top: 0.75rem;
+        border-top: 0.09375rem solid var(--cor-texto);
+    }
+
+    .info-rotulo {
+        font-size: 0.875rem;
+    }
+
+    .projeto-meio {
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: stretch;
+    }
+
+    .projeto-sobre {
+        flex: none;
+    }
+
+    #projeto-descricao p {
+        font-size: 1.125rem;
+    }
+
+    .projeto-links {
+        flex: none;
+        padding: 1.75rem;
+        border-radius: 1.5rem;
+    }
+
+    .projeto-links h3 {
+        text-align: center;
+        font-size: 1.625rem;
+    }
+
+    .galeria-grade {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-proximo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        padding: 2.25rem 1.5rem;
+        border-radius: 1.75rem;
+    }
+
+    .proximo-texto h2 {
+        font-size: 2.5rem;
+        line-height: 1.05;
+    }
+
+    .proximo-botoes {
+        flex-direction: column;
+    }
+
+    .proximo-botoes .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
