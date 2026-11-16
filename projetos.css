@@ -149,14 +149,6 @@
     font-size: 1.75rem;
 }
 
-.card-tag {
-    align-self: flex-start;
-    padding: 0.375rem 1rem;
-    border-radius: 6.25rem;
-    border: 0.0625rem solid var(--cor-texto);
-    font-size: 0.875rem;
-}
-
 .card-seta {
     font-size: 1.5rem;
     color: var(--cor-destaque);
