@@ -146,10 +146,17 @@ const projetos = {
         destaque: false,
         imagem: 'imagens/projetos/holly-desserts/principal.webp',
         descricao: {
-            pt: 'Meu primeiro site. Uma página simples sobre sobremesas, feita com HTML e CSS básico. Longe de ser bonito, mas foi onde tudo começou — e sem ele os outros não existiriam.',
-            en: 'My first website. A simple page about desserts, built with basic HTML and CSS. Far from beautiful, but it\'s where it all began — and without it, none of the others would exist.'
+            pt: 'Um dos primeiros projetos que fiz sozinha, depois de alguns sites feitos acompanhando um curso. É uma página simples com a receita de cookies, em HTML e CSS básicos. Longe de ser bonito, mas foi um passo importante na minha evolução.',
+            en: 'One of the first projects I built on my own, after a few sites made while following a course. A simple page with a cookie recipe, built with basic HTML and CSS. Far from beautiful, but an important step in my progress.'
         },
         link: 'https://nathaliadebona.github.io/holly-desserts/',
+        ano: 2024,
+        github: 'https://github.com/nathaliadebona/holly-desserts',
+        resumo: {
+            pt: 'Um dos meus primeiros projetos feitos sozinha: uma página única com a receita de cookies.',
+            en: 'One of my first projects built on my own: a single page with a cookie recipe.'
+        },
+        tecnologias: ['HTML', 'CSS'],
         galeria: [
             'imagens/projetos/holly-desserts/galeria-1.webp'
         ],
@@ -168,10 +175,17 @@ const projetos = {
         destaque: false,
         imagem: 'imagens/projetos/holy-kitchen/principal.webp',
         descricao: {
-            pt: 'Site de receitas culinárias com múltiplas páginas funcionando — doces, salgadas, contato e artigos com dicas. Um salto claro em relação ao anterior, mesmo que a estética ainda estivesse engatinhando.',
-            en: 'A culinary recipe website with multiple working pages — sweet, savory, contact and tip articles. A clear step up from the previous one, even though the aesthetic was still finding its footing.'
+            pt: 'Site de receitas culinárias com várias páginas: receitas doces e salgadas, dicas, contato e menu hambúrguer. Foi o meu primeiro site multi-páginas — um salto claro em relação ao anterior, mesmo que a estética ainda estivesse engatinhando.',
+            en: 'A culinary recipe website with multiple pages: sweet and savory recipes, tips, contact and a hamburger menu. It was my first multi-page website — a clear step up from the previous one, even though the aesthetic was still finding its footing.'
         },
         link: 'https://nathaliadebona.github.io/holy-kitchen/',
+        ano: 2024,
+        github: 'https://github.com/nathaliadebona/holy-kitchen',
+        resumo: {
+            pt: 'Site de receitas doces e salgadas, com dicas, contato e menu hambúrguer. Meu primeiro site multi-páginas.',
+            en: 'Sweet and savory recipe website with tips, contact and a hamburger menu. My first multi-page website.'
+        },
+        tecnologias: ['HTML', 'CSS'],
         galeria: [
             'imagens/projetos/holy-kitchen/galeria-1.webp',
             'imagens/projetos/holy-kitchen/galeria-2.webp',
@@ -196,6 +210,13 @@ const projetos = {
             en: 'A currency converter between BRL, USD, EUR and GBP with fixed rates. My first JavaScript-focused project — this is where I learned to use objects as data tables, bracket notation for dynamic access and input validation. Simple, but full of logic.'
         },
         link: 'https://nathaliadebona.github.io/cambio-facil/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cambio-facil',
+        resumo: {
+            pt: 'Conversor de moedas fictício, direto e sem jargão, entre real, dólar, euro e libra.',
+            en: 'A fictional currency converter, straightforward and jargon-free, between BRL, USD, EUR and GBP.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Google Fonts'],
         galeria: [
             'imagens/projetos/cambio-facil/galeria-1.webp',
             'imagens/projetos/cambio-facil/galeria-2.webp'
@@ -219,6 +240,13 @@ const projetos = {
             en: 'A task list app for freelancers and small entrepreneurs. Allows adding, marking as complete, deleting tasks and clearing completed ones at once. Data persists between reloads via localStorage. This is where I learned to create elements dynamically with createElement and organize code into reusable functions.'
         },
         link: 'https://nathaliadebona.github.io/task-flow/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/task-flow',
+        resumo: {
+            pt: 'Lista de tarefas fictícia para freelancers e pequenos empreendedores, simples e sem cadastro.',
+            en: 'A fictional to-do list for freelancers and small business owners, simple and with no sign-up.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/task-flow/principal.webp'
         ],
@@ -241,6 +269,13 @@ const projetos = {
             en: 'Institutional website for a fictional coffee shop in Florianópolis with five pages: Home, About, Menu, Gallery and Contact. Includes price tables with zebra striping, a CSS Grid gallery and a contact form. One of my first most complete projects, built with HTML and CSS only.'
         },
         link: 'https://nathaliadebona.github.io/cafe-velvet/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cafe-velvet',
+        resumo: {
+            pt: 'Site institucional de uma cafeteria fictícia em Florianópolis, com cardápio em tabelas, galeria e contato.',
+            en: 'Institutional website for a fictional coffee shop in Florianópolis, with a menu in tables, a gallery and a contact page.'
+        },
+        tecnologias: ['HTML', 'CSS', 'Google Fonts'],
         galeria: [
             'imagens/projetos/cafe-velvet/galeria-1.webp',
             'imagens/projetos/cafe-velvet/galeria-2.webp',
@@ -265,6 +300,13 @@ const projetos = {
             en: 'Website for a fictional artisanal brand of soy candles and natural soaps. Four pages with a refined visual identity, responsive banner in three different sizes, image carousel on products and animated header shadow on scroll. One of the projects I\'m most proud of aesthetically.'
         },
         link: 'https://nathaliadebona.github.io/lumiere/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/lumiere',
+        resumo: {
+            pt: 'Site de um ateliê fictício de velas e sabonetes artesanais, com banner responsivo e carrossel de imagens nos produtos.',
+            en: 'Website for a fictional artisan studio of candles and soaps, with a responsive banner and image carousels on the products.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/lumiere/galeria-1.webp',
             'imagens/projetos/lumiere/galeria-2.webp',
@@ -320,6 +362,13 @@ const projetos = {
             en: 'Portfolio website for a fictional image consultant and personal stylist. A project that had been sitting in a drawer that I decided to finish — simple, but it closed a cycle and kept the delivery rhythm going.'
         },
         link: 'https://nathaliadebona.github.io/isabela-voss/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/isabela-voss',
+        resumo: {
+            pt: 'Site de portfólio de uma consultora de imagem fictícia, com menu mobile e destaque automático do link da seção visível.',
+            en: 'Portfolio website for a fictional image consultant, with a mobile menu and automatic highlighting of the link for the visible section.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/isabela-voss/galeria-1.webp',
             'imagens/projetos/isabela-voss/galeria-2.webp'
@@ -343,6 +392,13 @@ const projetos = {
             en: 'Institutional website for a fictional high-end real estate developer. My first challenge outside the styles I was used to — more sober and corporate. Includes a hamburger menu, animated number counter with IntersectionObserver and custom form validation with inline error messages.'
         },
         link: 'https://nathaliadebona.github.io/mendes-braga/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/mendes-braga',
+        resumo: {
+            pt: 'Site institucional de uma incorporadora fictícia de imóveis de alto padrão, com contador animado e formulário validado.',
+            en: 'Institutional website for a fictional high-end real estate developer, with an animated counter and a validated form.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/mendes-braga/galeria-1.webp',
             'imagens/projetos/mendes-braga/galeria-2.webp',
@@ -367,6 +423,13 @@ const projetos = {
             en: 'Portfolio website for a fictional photography and video studio with an editorial aesthetic inspired by fashion magazines. My first bilingual PT/EN project, with an interactive lightbox in the portfolio, hamburger menu and language toggle via dataset. The most demanding so far — and the most rewarding.'
         },
         link: 'https://nathaliadebona.github.io/duarte-studio/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/duarte-studio',
+        resumo: {
+            pt: 'Site de uma single page para um fotógrafo e videomaker fictício, com lightbox interativo e versão em português e inglês.',
+            en: 'Single-page website for a fictional photographer and videomaker, with an interactive lightbox and Portuguese and English versions.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/duarte-studio/galeria-1.webp',
             'imagens/projetos/duarte-studio/galeria-2.webp',
@@ -391,6 +454,13 @@ const projetos = {
             en: 'Landing page for a fictional B2B SaaS startup specializing in AI automation. The boldest project aesthetically: dark background, neon glow effects, glassmorphism in the header and AI-generated visual identity. Bilingual PT/EN with language toggle and panel hamburger menu.'
         },
         link: 'https://nathaliadebona.github.io/nexon/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/nexon',
+        resumo: {
+            pt: 'Landing page de uma startup fictícia de automação com IA, com efeitos de glow e glassmorphism e versão em português e inglês.',
+            en: 'Landing page for a fictional AI automation startup, with glow and glassmorphism effects and Portuguese and English versions.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/nexon/galeria-1.webp',
             'imagens/projetos/nexon/galeria-2.webp',
@@ -477,6 +547,13 @@ const projetos = {
             en: 'A fictional online store for national and international vinyl records — my first complete e-commerce project. Four pages with a functional cart, category filter, discount coupon with validation, testimonial carousel and welcome modal. Cart data persists between pages via localStorage.'
         },
         link: 'https://nathaliadebona.github.io/bossa-e-static/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/bossa-e-static',
+        resumo: {
+            pt: 'Loja de discos fictícia com catálogo filtrável, carrinho persistente com localStorage e cupom de primeira compra.',
+            en: 'Fictional record store with a filterable catalog, a persistent localStorage cart and a first-purchase coupon.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/bossa-static/galeria-1.webp',
             'imagens/projetos/bossa-static/galeria-2.webp',
