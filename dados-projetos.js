@@ -67,8 +67,8 @@ const projetos = {
         destaque: false,
         imagem: 'imagens/projetos/sprint-planner/principal.webp',
         descricao: {
-            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista: bordas grossas, sombras duras e uma paleta ousada de verde-escuro, orquídea e creme. São sete seções, do hero à chamada final, com um FAQ feito só com HTML (details e summary), sem JavaScript. Construída pensando primeiro no celular.',
-            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style: thick borders, hard shadows and a bold palette of dark green, orchid and cream. It has seven sections, from the hero to the final call to action, with an FAQ built with plain HTML (details and summary), no JavaScript. Designed mobile-first.'
+            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista: bordas grossas, sombras duras, adesivos levemente girados e botões que afundam ao clicar. As páginas do planner são desenhadas só com HTML e CSS, e a galeria rola na horizontal no celular. Construída pensando primeiro no celular.',
+            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style: thick borders, hard shadows, slightly rotated stickers and buttons that press down on click. The planner pages are drawn with just HTML and CSS, and the gallery scrolls horizontally on mobile. Designed mobile-first.'
         },
         link: 'https://nathaliadebona.github.io/sprint-planner/',
         ano: 2026,
@@ -91,8 +91,8 @@ const projetos = {
         destaque: false,
         imagem: 'imagens/projetos/primeiro-commit/principal.webp',
         descricao: {
-            pt: 'Landing page de conversão para uma mentoria fictícia de carreira em tecnologia, voltada a quem quer entrar em front-end. Sete seções levam a pessoa até um formulário de captura com nome, e-mail e uma pergunta sobre o maior desafio. O visual mistura um clima acolhedor com toques de código, em off-white, roxo e verde-menta.',
-            en: 'Conversion landing page for a fictional tech career mentorship aimed at people who want to break into front-end. Seven sections lead the visitor to a lead capture form with name, email and a question about their biggest challenge. The look blends a welcoming feel with touches of code, in off-white, purple and mint green.'
+            pt: 'Landing page de conversão para uma mentoria fictícia de front-end, pensada para quem quer sair do zero e chegar ao primeiro portfólio. O visual brinca com o Git: um terminal digita um commit no topo da página e a trilha da mentoria aparece como um git log. São sete seções, até um formulário de lista de espera com validação personalizada.',
+            en: 'Conversion landing page for a fictional front-end mentorship, made for people who want to go from zero to their first portfolio. The look plays with Git: a terminal types a commit at the top of the page and the mentorship path appears as a git log. Seven sections lead to a waitlist form with custom validation.'
         },
         link: 'https://nathaliadebona.github.io/primeiro-commit/',
         ano: 2026,
@@ -119,6 +119,13 @@ const projetos = {
             en: 'Fictional retro American-style ice cream and candy shop with a look very different from anything I had done before. In addition to the shopping cart, I brought two brand-new features: a personality quiz that suggests your ideal ice cream and an interactive build-your-own-sundae.'
         },
         link: 'https://nathaliadebona.github.io/cherry-pop/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cherry-pop',
+        resumo: {
+            pt: 'Loja fictícia de sorvetes de estilo retrô, com carrinho, quiz de personalidade e monte-seu-sundae.',
+            en: 'Fictional retro-style ice cream shop with a shopping cart, a personality quiz and a build-your-own-sundae.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
         galeria: [
             'imagens/projetos/cherry-pop/galeria-1.webp',
             'imagens/projetos/cherry-pop/galeria-2.webp',
@@ -408,6 +415,13 @@ const projetos = {
             en: 'A complete rebuild of my second website — now with 13 pages organized into hubs, JavaScript from basics to advanced and a completely rethought visual identity. Includes a recipe filter, proportional serving calculator, interactive checklist, measurement converter modal, automatic carousel and custom form validation. The clearest proof of my evolution.'
         },
         link: 'https://nathaliadebona.github.io/holy-kitchen-v2/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/holy-kitchen-v2',
+        resumo: {
+            pt: 'Site de receitas com filtros, calculadora de porções, blog de dicas e envio de receitas.',
+            en: 'Recipe website with filters, a serving calculator, a tips blog and recipe submission.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/holy-kitchen-v2/galeria-1.webp',
             'imagens/projetos/holy-kitchen-v2/galeria-2.webp',
@@ -432,6 +446,13 @@ const projetos = {
             en: 'Website for a fictional premium barbershop in Vila Olímpia, rebuilt from scratch with everything I\'d learned along the way. Includes a booking modal with a native dialog reused by all three barbers via dataset, interactive gallery with hover effects and manual scrollspy calculated via getBoundingClientRect. Not always the niche you\'d choose — but the result was surprising.'
         },
         link: 'https://nathaliadebona.github.io/navalha-e-co/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/navalha-e-co',
+        resumo: {
+            pt: 'Site de uma barbearia premium fictícia, com modal de agendamento e menu que acompanha a rolagem.',
+            en: 'Website for a fictional premium barbershop, with a booking modal and a menu that follows the scroll.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/navalha-co/galeria-1.webp',
             'imagens/projetos/navalha-co/galeria-2.webp',
@@ -480,6 +501,13 @@ const projetos = {
             en: 'A quick reference guide for front-end developers, with HTML, CSS and JavaScript snippets organized by category. Allows searching by keyword, copying code with one click and bookmarking the most-used snippets — all saved to localStorage. A utility project born from the study routine itself.'
         },
         link: 'https://nathaliadebona.github.io/devpocket/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/devpocket',
+        resumo: {
+            pt: 'Kit de bolso para devs: conversor de px para rem, conversor de cores e gerador de box-shadow.',
+            en: 'A pocket toolkit for devs: px to rem converter, color converter and box-shadow generator.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/devpocket/galeria-1.webp',
             'imagens/projetos/devpocket/galeria-2.webp',
@@ -504,6 +532,13 @@ const projetos = {
             en: 'An interactive multiple-choice quiz on HTML, CSS, JavaScript and accessibility, based on a Frontend Mentor challenge. Four themes with their own icons and colors, immediate visual feedback on each answer, a final score and light/dark theme. This is where I learned to structure data in JSON and render the interface dynamically from it.'
         },
         link: 'https://nathaliadebona.github.io/frontend-quiz/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/frontend-quiz',
+        resumo: {
+            pt: 'Quiz com tempo sobre HTML, CSS e JavaScript, com três níveis de dificuldade e correção explicada.',
+            en: 'A timed quiz on HTML, CSS and JavaScript, with three difficulty levels and explained answers.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/frontend-quiz/galeria-1.webp',
             'imagens/projetos/frontend-quiz/galeria-2.webp',
@@ -528,6 +563,13 @@ const projetos = {
             en: 'A daily mood tracking app with a two-step check-in (mood and sleep hours), time-based dynamic greeting, a personal journal with filterable history and pagination, and a monthly bar chart with horizontal scroll. The page background color changes according to the predominant mood from the last 5 entries. All data is stored in localStorage.'
         },
         link: 'https://nathaliadebona.github.io/moody/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/moody',
+        resumo: {
+            pt: 'App de humor diário com check-in rápido, diário pessoal e gráfico mensal.',
+            en: 'Daily mood app with a quick check-in, a personal journal and a monthly chart.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
         galeria: [
             'imagens/projetos/moody/galeria-1.webp',
             'imagens/projetos/moody/galeria-2.webp',
@@ -552,6 +594,13 @@ const projetos = {
             en: 'A customizable password generator based on a Frontend Mentor challenge: choose the length (5 to 20 characters) and character types, see the strength level in four grades (too weak to strong) with text and colored bars, and copy with one click. Slider with progressive fill up to the thumb, dark theme, responsive layout and basic accessibility.'
         },
         link: 'https://nathaliadebona.github.io/password-generator/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/password-generator',
+        resumo: {
+            pt: 'Gerador de senhas com tamanho ajustável, indicador de força e botão de copiar.',
+            en: 'Password generator with adjustable length, a strength indicator and a copy button.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/password-generator/principal.webp'
         ],
@@ -574,6 +623,13 @@ const projetos = {
             en: 'A scheduling system for a fictional pet shop with two sides: a tutor area to browse services and book time slots, and a staff panel with a simulated login to manage the daily agenda, status and payments. Available slots calculated from the service duration and opening hours, with Sundays and past dates blocked. Mobile-first layout with animations that respect prefers-reduced-motion.'
         },
         link: 'https://nathaliadebona.github.io/patinhas-e-cia/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/patinhas-e-cia',
+        resumo: {
+            pt: 'Sistema de agendamento de um pet shop fictício, com área do tutor e painel da equipe.',
+            en: 'Scheduling system for a fictional pet shop, with a pet owner area and a staff panel.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
         galeria: [
             'imagens/projetos/patinhas-e-cia/galeria-1.webp',
             'imagens/projetos/patinhas-e-cia/galeria-2.webp',
