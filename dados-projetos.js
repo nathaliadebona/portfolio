@@ -20,14 +20,7 @@ const projetos = {
             'imagens/projetos/kairo/galeria-1.webp',
             'imagens/projetos/kairo/galeria-2.webp',
             'imagens/projetos/kairo/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Multi-páginas'],
-                en: ['Multi-page']
-            }
-        }
+        ]
     },
 
     'vanity': {
@@ -51,14 +44,7 @@ const projetos = {
             'imagens/projetos/vanity/galeria-1.webp',
             'imagens/projetos/vanity/galeria-2.webp',
             'imagens/projetos/vanity/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Firebase', 'Multi-páginas'],
-                en: ['Firebase', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'sprint-planner': {
@@ -130,14 +116,7 @@ const projetos = {
             'imagens/projetos/cherry-pop/galeria-1.webp',
             'imagens/projetos/cherry-pop/galeria-2.webp',
             'imagens/projetos/cherry-pop/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Multi-páginas'],
-                en: ['localStorage', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'holly-desserts': {
@@ -159,14 +138,7 @@ const projetos = {
         tecnologias: ['HTML', 'CSS'],
         galeria: [
             'imagens/projetos/holly-desserts/galeria-1.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'holy-kitchen-v1': {
@@ -190,14 +162,7 @@ const projetos = {
             'imagens/projetos/holy-kitchen/galeria-1.webp',
             'imagens/projetos/holy-kitchen/galeria-2.webp',
             'imagens/projetos/holy-kitchen/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain'],
-            texto: {
-                pt: ['Multi-páginas'],
-                en: ['Multi-page']
-            }
-        }
+        ]
     },
 
     'cambio-facil': {
@@ -220,14 +185,7 @@ const projetos = {
         galeria: [
             'imagens/projetos/cambio-facil/galeria-1.webp',
             'imagens/projetos/cambio-facil/galeria-2.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'task-flow': {
@@ -249,14 +207,7 @@ const projetos = {
         tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
         galeria: [
             'imagens/projetos/task-flow/principal.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'cafe-velvet': {
@@ -280,14 +231,7 @@ const projetos = {
             'imagens/projetos/cafe-velvet/galeria-1.webp',
             'imagens/projetos/cafe-velvet/galeria-2.webp',
             'imagens/projetos/cafe-velvet/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain'],
-            texto: {
-                pt: ['Multi-páginas'],
-                en: ['Multi-page']
-            }
-        }
+        ]
     },
 
     'lumiere': {
@@ -311,14 +255,7 @@ const projetos = {
             'imagens/projetos/lumiere/galeria-1.webp',
             'imagens/projetos/lumiere/galeria-2.webp',
             'imagens/projetos/lumiere/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Multi-páginas', 'Design editorial'],
-                en: ['Multi-page', 'Editorial design']
-            }
-        }
+        ]
     },
 
     'glow-republic': {
@@ -342,14 +279,7 @@ const projetos = {
             'imagens/projetos/glow-republic/galeria-1.webp',
             'imagens/projetos/glow-republic/galeria-2.webp',
             'imagens/projetos/glow-republic/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Animações', 'Multi-páginas'],
-                en: ['localStorage', 'Animations', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'isabela-voss': {
@@ -372,14 +302,7 @@ const projetos = {
         galeria: [
             'imagens/projetos/isabela-voss/galeria-1.webp',
             'imagens/projetos/isabela-voss/galeria-2.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'mendes-braga': {
@@ -403,14 +326,7 @@ const projetos = {
             'imagens/projetos/mendes-braga/galeria-1.webp',
             'imagens/projetos/mendes-braga/galeria-2.webp',
             'imagens/projetos/mendes-braga/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'duarte-studio': {
@@ -434,14 +350,7 @@ const projetos = {
             'imagens/projetos/duarte-studio/galeria-1.webp',
             'imagens/projetos/duarte-studio/galeria-2.webp',
             'imagens/projetos/duarte-studio/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Bilíngue', 'Página única'],
-                en: ['Bilingual', 'Single page']
-            }
-        }
+        ]
     },
 
     'nexon': {
@@ -465,14 +374,7 @@ const projetos = {
             'imagens/projetos/nexon/galeria-1.webp',
             'imagens/projetos/nexon/galeria-2.webp',
             'imagens/projetos/nexon/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Bilíngue', 'Página única'],
-                en: ['Bilingual', 'Single page']
-            }
-        }
+        ]
     },
 
     'holy-kitchen-v2': {
@@ -496,14 +398,7 @@ const projetos = {
             'imagens/projetos/holy-kitchen-v2/galeria-1.webp',
             'imagens/projetos/holy-kitchen-v2/galeria-2.webp',
             'imagens/projetos/holy-kitchen-v2/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Multi-páginas'],
-                en: ['Multi-page']
-            }
-        }
+        ]
     },
 
     'navalha-co': {
@@ -527,14 +422,7 @@ const projetos = {
             'imagens/projetos/navalha-co/galeria-1.webp',
             'imagens/projetos/navalha-co/galeria-2.webp',
             'imagens/projetos/navalha-co/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'bossa-static': {
@@ -558,14 +446,7 @@ const projetos = {
             'imagens/projetos/bossa-static/galeria-1.webp',
             'imagens/projetos/bossa-static/galeria-2.webp',
             'imagens/projetos/bossa-static/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Multi-páginas'],
-                en: ['localStorage', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'devpocket': {
@@ -589,14 +470,7 @@ const projetos = {
             'imagens/projetos/devpocket/galeria-1.webp',
             'imagens/projetos/devpocket/galeria-2.webp',
             'imagens/projetos/devpocket/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Página única'],
-                en: ['localStorage', 'Single page']
-            }
-        }
+        ]
     },
 
     'frontend-quiz': {
@@ -620,14 +494,7 @@ const projetos = {
             'imagens/projetos/frontend-quiz/galeria-1.webp',
             'imagens/projetos/frontend-quiz/galeria-2.webp',
             'imagens/projetos/frontend-quiz/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'moody': {
@@ -651,14 +518,7 @@ const projetos = {
             'imagens/projetos/moody/galeria-1.webp',
             'imagens/projetos/moody/galeria-2.webp',
             'imagens/projetos/moody/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Multi-páginas'],
-                en: ['localStorage', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'password-generator': {
@@ -680,14 +540,7 @@ const projetos = {
         tecnologias: ['HTML', 'CSS', 'JavaScript'],
         galeria: [
             'imagens/projetos/password-generator/principal.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['Página única'],
-                en: ['Single page']
-            }
-        }
+        ]
     },
 
     'patinhas-e-cia': {
@@ -711,14 +564,7 @@ const projetos = {
             'imagens/projetos/patinhas-e-cia/galeria-1.webp',
             'imagens/projetos/patinhas-e-cia/galeria-2.webp',
             'imagens/projetos/patinhas-e-cia/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Multi-páginas'],
-                en: ['localStorage', 'Multi-page']
-            }
-        }
+        ]
     },
 
     'focus-flow': {
@@ -742,14 +588,7 @@ const projetos = {
             'imagens/projetos/focus-flow/galeria-1.webp',
             'imagens/projetos/focus-flow/galeria-2.webp',
             'imagens/projetos/focus-flow/galeria-3.webp'
-        ],
-        tags: {
-            icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
-            texto: {
-                pt: ['localStorage', 'Página única'],
-                en: ['localStorage', 'Single page']
-            }
-        }
+        ]
     }
 }
 
