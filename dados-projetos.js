@@ -50,7 +50,7 @@ const projetos = {
     'sprint-planner': {
         nome: 'Sprint',
         tipo: 'pagina-unica',
-        destaque: false,
+        destaque: true,
         imagem: 'imagens/projetos/sprint-planner/principal.webp',
         descricao: {
             pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista: bordas grossas, sombras duras, adesivos levemente girados e botões que afundam ao clicar. As páginas do planner são desenhadas só com HTML e CSS, e a galeria rola na horizontal no celular. Construída pensando primeiro no celular.',
@@ -570,7 +570,7 @@ const projetos = {
     'focus-flow': {
         nome: 'Focus & Flow',
         tipo: 'app',
-        destaque: true,
+        destaque: false,
         imagem: 'imagens/projetos/focus-flow/hero.webp',
         descricao: {
             pt: 'Dashboard de produtividade pessoal com notas, calendário e estatísticas — inspirado nas ferramentas que uso no dia a dia. Permite criar, editar e excluir notas e eventos, anexar arquivos ao calendário e importar dados via CSV ou JSON. Tudo armazenado localmente via localStorage, sem nenhum servidor. Em evolução contínua.',
