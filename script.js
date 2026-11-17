@@ -148,3 +148,61 @@ document.addEventListener('click', (evento) => {
 
 
 
+
+// CURSOR COM BRILHO
+const temMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (temMouse && !prefereMenosMovimento) {
+    const brilho = document.createElement('span');
+    brilho.className = 'cursor-brilho';
+    brilho.setAttribute('aria-hidden', 'true');
+    brilho.textContent = '✦';
+    document.body.appendChild(brilho);
+
+    const deslocamento = 16;
+    const suavidade = 0.15;
+    let alvoX = 0;
+    let alvoY = 0;
+    let brilhoX = 0;
+    let brilhoY = 0;
+    let animando = false;
+
+    function moverBrilho() {
+        brilhoX += (alvoX - brilhoX) * suavidade;
+        brilhoY += (alvoY - brilhoY) * suavidade;
+
+        brilho.style.transform = `translate3d(${brilhoX}px, ${brilhoY}px, 0)`;
+
+        if (Math.abs(alvoX - brilhoX) > 0.1 || Math.abs(alvoY - brilhoY) > 0.1) {
+            requestAnimationFrame(moverBrilho);
+        } else {
+            animando = false;
+        }
+    }
+
+    document.addEventListener('mousemove', (evento) => {
+        alvoX = evento.clientX + deslocamento;
+        alvoY = evento.clientY + deslocamento;
+
+        if (!brilho.classList.contains('ativo')) {
+            brilhoX = alvoX;
+            brilhoY = alvoY;
+            brilho.classList.add('ativo');
+        }
+
+        if (!animando) {
+            animando = true;
+            requestAnimationFrame(moverBrilho);
+        }
+    });
+
+    document.addEventListener('mouseover', (evento) => {
+        const clicavel = evento.target.closest('a, button, input, textarea, select, label');
+        brilho.classList.toggle('sobre-clicavel', Boolean(clicavel));
+    });
+
+    document.documentElement.addEventListener('mouseleave', () => {
+        brilho.classList.remove('ativo');
+    });
+}
