@@ -71,6 +71,11 @@ const projetos = {
             en: 'Fictional retro American-style ice cream and candy shop with a look very different from anything I had done before. In addition to the shopping cart, I brought two brand-new features: a personality quiz that suggests your ideal ice cream and an interactive build-your-own-sundae.'
         },
         link: 'https://nathaliadebona.github.io/cherry-pop/',
+        galeria: [
+            'imagens/projetos/cherry-pop/galeria-1.webp',
+            'imagens/projetos/cherry-pop/galeria-2.webp',
+            'imagens/projetos/cherry-pop/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -90,6 +95,9 @@ const projetos = {
             en: 'My first website. A simple page about desserts, built with basic HTML and CSS. Far from beautiful, but it\'s where it all began — and without it, none of the others would exist.'
         },
         link: 'https://nathaliadebona.github.io/holly-desserts/',
+        galeria: [
+            'imagens/projetos/holly-desserts/galeria-1.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain'],
             texto: {
@@ -109,6 +117,11 @@ const projetos = {
             en: 'A culinary recipe website with multiple working pages — sweet, savory, contact and tip articles. A clear step up from the previous one, even though the aesthetic was still finding its footing.'
         },
         link: 'https://nathaliadebona.github.io/holy-kitchen/',
+        galeria: [
+            'imagens/projetos/holy-kitchen/galeria-1.webp',
+            'imagens/projetos/holy-kitchen/galeria-2.webp',
+            'imagens/projetos/holy-kitchen/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain'],
             texto: {
@@ -128,6 +141,10 @@ const projetos = {
             en: 'A currency converter between BRL, USD, EUR and GBP with fixed rates. My first JavaScript-focused project — this is where I learned to use objects as data tables, bracket notation for dynamic access and input validation. Simple, but full of logic.'
         },
         link: 'https://nathaliadebona.github.io/cambio-facil/',
+        galeria: [
+            'imagens/projetos/cambio-facil/galeria-1.webp',
+            'imagens/projetos/cambio-facil/galeria-2.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -147,6 +164,9 @@ const projetos = {
             en: 'A task list app for freelancers and small entrepreneurs. Allows adding, marking as complete, deleting tasks and clearing completed ones at once. Data persists between reloads via localStorage. This is where I learned to create elements dynamically with createElement and organize code into reusable functions.'
         },
         link: 'https://nathaliadebona.github.io/task-flow/',
+        galeria: [
+            'imagens/projetos/task-flow/principal.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -166,6 +186,11 @@ const projetos = {
             en: 'Institutional website for a fictional coffee shop in Florianópolis with five pages: Home, About, Menu, Gallery and Contact. Includes price tables with zebra striping, a CSS Grid gallery and a contact form. One of my first most complete projects, built with HTML and CSS only.'
         },
         link: 'https://nathaliadebona.github.io/cafe-velvet/',
+        galeria: [
+            'imagens/projetos/cafe-velvet/galeria-1.webp',
+            'imagens/projetos/cafe-velvet/galeria-2.webp',
+            'imagens/projetos/cafe-velvet/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain'],
             texto: {
@@ -185,6 +210,11 @@ const projetos = {
             en: 'Website for a fictional artisanal brand of soy candles and natural soaps. Four pages with a refined visual identity, responsive banner in three different sizes, image carousel on products and animated header shadow on scroll. One of the projects I\'m most proud of aesthetically.'
         },
         link: 'https://nathaliadebona.github.io/lumiere/',
+        galeria: [
+            'imagens/projetos/lumiere/galeria-1.webp',
+            'imagens/projetos/lumiere/galeria-2.webp',
+            'imagens/projetos/lumiere/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -235,6 +265,10 @@ const projetos = {
             en: 'Portfolio website for a fictional image consultant and personal stylist. A project that had been sitting in a drawer that I decided to finish — simple, but it closed a cycle and kept the delivery rhythm going.'
         },
         link: 'https://nathaliadebona.github.io/isabela-voss/',
+        galeria: [
+            'imagens/projetos/isabela-voss/galeria-1.webp',
+            'imagens/projetos/isabela-voss/galeria-2.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -254,6 +288,11 @@ const projetos = {
             en: 'Institutional website for a fictional high-end real estate developer. My first challenge outside the styles I was used to — more sober and corporate. Includes a hamburger menu, animated number counter with IntersectionObserver and custom form validation with inline error messages.'
         },
         link: 'https://nathaliadebona.github.io/mendes-braga/',
+        galeria: [
+            'imagens/projetos/mendes-braga/galeria-1.webp',
+            'imagens/projetos/mendes-braga/galeria-2.webp',
+            'imagens/projetos/mendes-braga/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -273,6 +312,11 @@ const projetos = {
             en: 'Portfolio website for a fictional photography and video studio with an editorial aesthetic inspired by fashion magazines. My first bilingual PT/EN project, with an interactive lightbox in the portfolio, hamburger menu and language toggle via dataset. The most demanding so far — and the most rewarding.'
         },
         link: 'https://nathaliadebona.github.io/duarte-studio/',
+        galeria: [
+            'imagens/projetos/duarte-studio/galeria-1.webp',
+            'imagens/projetos/duarte-studio/galeria-2.webp',
+            'imagens/projetos/duarte-studio/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -292,6 +336,11 @@ const projetos = {
             en: 'Landing page for a fictional B2B SaaS startup specializing in AI automation. The boldest project aesthetically: dark background, neon glow effects, glassmorphism in the header and AI-generated visual identity. Bilingual PT/EN with language toggle and panel hamburger menu.'
         },
         link: 'https://nathaliadebona.github.io/nexon/',
+        galeria: [
+            'imagens/projetos/nexon/galeria-1.webp',
+            'imagens/projetos/nexon/galeria-2.webp',
+            'imagens/projetos/nexon/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -311,6 +360,11 @@ const projetos = {
             en: 'A complete rebuild of my second website — now with 13 pages organized into hubs, JavaScript from basics to advanced and a completely rethought visual identity. Includes a recipe filter, proportional serving calculator, interactive checklist, measurement converter modal, automatic carousel and custom form validation. The clearest proof of my evolution.'
         },
         link: 'https://nathaliadebona.github.io/holy-kitchen-v2/',
+        galeria: [
+            'imagens/projetos/holy-kitchen-v2/galeria-1.webp',
+            'imagens/projetos/holy-kitchen-v2/galeria-2.webp',
+            'imagens/projetos/holy-kitchen-v2/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -330,6 +384,11 @@ const projetos = {
             en: 'Website for a fictional premium barbershop in Vila Olímpia, rebuilt from scratch with everything I\'d learned along the way. Includes a booking modal with a native dialog reused by all three barbers via dataset, interactive gallery with hover effects and manual scrollspy calculated via getBoundingClientRect. Not always the niche you\'d choose — but the result was surprising.'
         },
         link: 'https://nathaliadebona.github.io/navalha-e-co/',
+        galeria: [
+            'imagens/projetos/navalha-co/galeria-1.webp',
+            'imagens/projetos/navalha-co/galeria-2.webp',
+            'imagens/projetos/navalha-co/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -349,6 +408,11 @@ const projetos = {
             en: 'A fictional online store for national and international vinyl records — my first complete e-commerce project. Four pages with a functional cart, category filter, discount coupon with validation, testimonial carousel and welcome modal. Cart data persists between pages via localStorage.'
         },
         link: 'https://nathaliadebona.github.io/bossa-e-static/',
+        galeria: [
+            'imagens/projetos/bossa-static/galeria-1.webp',
+            'imagens/projetos/bossa-static/galeria-2.webp',
+            'imagens/projetos/bossa-static/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -368,6 +432,11 @@ const projetos = {
             en: 'A quick reference guide for front-end developers, with HTML, CSS and JavaScript snippets organized by category. Allows searching by keyword, copying code with one click and bookmarking the most-used snippets — all saved to localStorage. A utility project born from the study routine itself.'
         },
         link: 'https://nathaliadebona.github.io/devpocket/',
+        galeria: [
+            'imagens/projetos/devpocket/galeria-1.webp',
+            'imagens/projetos/devpocket/galeria-2.webp',
+            'imagens/projetos/devpocket/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -387,6 +456,11 @@ const projetos = {
             en: 'An interactive multiple-choice quiz on HTML, CSS, JavaScript and accessibility, based on a Frontend Mentor challenge. Four themes with their own icons and colors, immediate visual feedback on each answer, a final score and light/dark theme. This is where I learned to structure data in JSON and render the interface dynamically from it.'
         },
         link: 'https://nathaliadebona.github.io/frontend-quiz/',
+        galeria: [
+            'imagens/projetos/frontend-quiz/galeria-1.webp',
+            'imagens/projetos/frontend-quiz/galeria-2.webp',
+            'imagens/projetos/frontend-quiz/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -406,6 +480,11 @@ const projetos = {
             en: 'A daily mood tracking app with a two-step check-in (mood and sleep hours), time-based dynamic greeting, a personal journal with filterable history and pagination, and a monthly bar chart with horizontal scroll. The page background color changes according to the predominant mood from the last 5 entries. All data is stored in localStorage.'
         },
         link: 'https://nathaliadebona.github.io/moody/',
+        galeria: [
+            'imagens/projetos/moody/galeria-1.webp',
+            'imagens/projetos/moody/galeria-2.webp',
+            'imagens/projetos/moody/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -425,6 +504,9 @@ const projetos = {
             en: 'A customizable password generator based on a Frontend Mentor challenge: choose the length (5 to 20 characters) and character types, see the strength level in four grades (too weak to strong) with text and colored bars, and copy with one click. Slider with progressive fill up to the thumb, dark theme, responsive layout and basic accessibility.'
         },
         link: 'https://nathaliadebona.github.io/password-generator/',
+        galeria: [
+            'imagens/projetos/password-generator/principal.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
@@ -444,6 +526,11 @@ const projetos = {
             en: 'A scheduling system for a fictional pet shop with two sides: a tutor area to browse services and book time slots, and a staff panel with a simulated login to manage the daily agenda, status and payments. Available slots calculated from the service duration and opening hours, with Sundays and past dates blocked. Mobile-first layout with animations that respect prefers-reduced-motion.'
         },
         link: 'https://nathaliadebona.github.io/patinhas-e-cia/',
+        galeria: [
+            'imagens/projetos/patinhas-e-cia/galeria-1.webp',
+            'imagens/projetos/patinhas-e-cia/galeria-2.webp',
+            'imagens/projetos/patinhas-e-cia/galeria-3.webp'
+        ],
         tags: {
             icones: ['devicon-html5-plain', 'devicon-css3-plain', 'devicon-javascript-plain'],
             texto: {
