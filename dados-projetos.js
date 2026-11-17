@@ -61,6 +61,54 @@ const projetos = {
         }
     },
 
+    'sprint-planner': {
+        nome: 'Sprint',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/sprint-planner/principal.webp',
+        descricao: {
+            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista: bordas grossas, sombras duras e uma paleta ousada de verde-escuro, orquídea e creme. São sete seções, do hero à chamada final, com um FAQ feito só com HTML (details e summary), sem JavaScript. Construída pensando primeiro no celular.',
+            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style: thick borders, hard shadows and a bold palette of dark green, orchid and cream. It has seven sections, from the hero to the final call to action, with an FAQ built with plain HTML (details and summary), no JavaScript. Designed mobile-first.'
+        },
+        link: 'https://nathaliadebona.github.io/sprint-planner/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/sprint-planner',
+        resumo: {
+            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista.',
+            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/sprint-planner/galeria-1.webp',
+            'imagens/projetos/sprint-planner/galeria-2.webp',
+            'imagens/projetos/sprint-planner/galeria-3.webp'
+        ]
+    },
+
+    'primeiro-commit': {
+        nome: 'Primeiro Commit',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/primeiro-commit/principal.webp',
+        descricao: {
+            pt: 'Landing page de conversão para uma mentoria fictícia de carreira em tecnologia, voltada a quem quer entrar em front-end. Sete seções levam a pessoa até um formulário de captura com nome, e-mail e uma pergunta sobre o maior desafio. O visual mistura um clima acolhedor com toques de código, em off-white, roxo e verde-menta.',
+            en: 'Conversion landing page for a fictional tech career mentorship aimed at people who want to break into front-end. Seven sections lead the visitor to a lead capture form with name, email and a question about their biggest challenge. The look blends a welcoming feel with touches of code, in off-white, purple and mint green.'
+        },
+        link: 'https://nathaliadebona.github.io/primeiro-commit/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/primeiro-commit',
+        resumo: {
+            pt: 'Landing page de uma mentoria fictícia para quem quer entrar em front-end, com foco em conversão.',
+            en: 'Landing page for a fictional mentorship for people breaking into front-end, focused on conversion.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/primeiro-commit/galeria-1.webp',
+            'imagens/projetos/primeiro-commit/galeria-2.webp',
+            'imagens/projetos/primeiro-commit/galeria-3.webp'
+        ]
+    },
+
     'cherry-pop': {
         nome: 'Cherry Pop',
         tipo: 'varias-paginas',
