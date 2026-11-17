@@ -482,7 +482,24 @@ header nav button:hover {
     transform: translateY(-0.375rem) rotate(-0.6deg);
 }
 
+.revelar {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.revelar.revelado {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
+    .revelar {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
     .hero-saudacao,
     #hero h1,
     #hero h2,

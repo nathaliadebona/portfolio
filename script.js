@@ -75,6 +75,20 @@ const observer = new IntersectionObserver((entradas) => {
 
 secoes.forEach(secao => observer.observe(secao));
 
+// APARECER AO ROLAR
+const elementosRevelar = document.querySelectorAll('.revelar');
+
+const observerRevelar = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('revelado');
+            observerRevelar.unobserve(entrada.target);
+        }
+    });
+}, { threshold: 0.15 });
+
+elementosRevelar.forEach(elemento => observerRevelar.observe(elemento));
+
 // FORMULARIO
 const form = document.querySelector('#form-contato');
 
