@@ -95,6 +95,29 @@ const projetos = {
         ]
     },
 
+    'fio-e-linha': {
+        nome: 'Fio & Linha',
+        tipo: 'backend',
+        destaque: false,
+        imagem: 'imagens/projetos/fio-e-linha/principal.webp',
+        descricao: {
+            pt: 'Sistema de controle de estoque para uma loja fictícia de roupa feminina. A equipe cadastra as peças por categoria e tamanho, dá baixa nas vendas em poucos cliques, consulta o histórico, registra devoluções sem perder a venda original e gerencia quem tem acesso. Meu projeto de aprendizado com um backend simples: Node.js e Express guardando os dados em arquivos JSON, com login por token e senhas protegidas com hash.',
+            en: 'Inventory control system for a fictional women\'s clothing store. The team registers items by category and size, records sales in a few clicks, checks the history, logs returns without losing the original sale and manages who has access. My learning project with a simple backend: Node.js and Express storing data in JSON files, with token login and hashed passwords.'
+        },
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/fio-e-linha',
+        resumo: {
+            pt: 'Controle de estoque para uma loja fictícia de roupas, com vendas, devoluções e login, usando Node.js e Express.',
+            en: 'Inventory control for a fictional clothing store, with sales, returns and login, built with Node.js and Express.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'JSON'],
+        galeria: [
+            'imagens/projetos/fio-e-linha/galeria-1.webp',
+            'imagens/projetos/fio-e-linha/galeria-2.webp',
+            'imagens/projetos/fio-e-linha/galeria-3.webp'
+        ]
+    },
+
     'cherry-pop': {
         nome: 'Cherry Pop',
         tipo: 'varias-paginas',

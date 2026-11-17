@@ -54,13 +54,17 @@ if (!projeto) {
         <p data-pt="${projeto.descricao.pt}" data-en="${projeto.descricao.en}">${projeto.descricao[idiomaAtual]}</p>
     `;
 
-    let botoes = `
-        <a class="btn" href="${projeto.link}" target="_blank" data-pt="Ver online" data-en="View online">Ver online</a>
-    `;
+    let botoes = '';
+
+    if (projeto.link) {
+        botoes += `
+            <a class="btn" href="${projeto.link}" target="_blank" data-pt="Ver online" data-en="View online">Ver online</a>
+        `;
+    }
 
     if (projeto.github) {
         botoes += `
-            <a class="btn btn-contorno" href="${projeto.github}" target="_blank" data-pt="Ver código no GitHub" data-en="View code on GitHub">Ver código no GitHub</a>
+            <a class="btn ${projeto.link ? 'btn-contorno' : ''}" href="${projeto.github}" target="_blank" data-pt="Ver código no GitHub" data-en="View code on GitHub">Ver código no GitHub</a>
         `;
     }
 
