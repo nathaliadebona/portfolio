@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Nathália de Bona</title>
 </head>
@@ -15,18 +16,21 @@
 <body>
     <header>
         <nav>
-            <span>✦ Nathália de Bona</span>
+            <span>✦ nathália</span>
 
             <ul>
                 <li><a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a></li>
                 <li><a href="#habilidades" data-pt="Habilidades" data-en="Skills">Habilidades</a></li>
                 <li><a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a></li>
                 <li><a href="#contato" data-pt="Contato" data-en="Contact">Contato</a></li>
+                <li class="item-idioma">
+                    <button type="button" id="toggle-idioma-mobile">EN</button>
+                </li>
             </ul>
 
             <div class="nav-botoes">
-                <button id="btn-menu" aria-label="Menu">
-                    <i class="fa-solid fa-bars"></i>
+                <button id="btn-menu" aria-expanded="false">
+                    <span data-pt="Menu" data-en="Menu">Menu</span>
                 </button>
 
                 <button id="toggle-idioma">EN</button>
@@ -37,255 +41,232 @@
     <main>
         <section id="hero">
             <div class="hero-texto">
-                <span data-pt="Olá, eu sou" data-en="Hi, I'm">
+                <span class="hero-saudacao" data-pt="Olá, eu sou" data-en="Hi, I'm">
                     Olá, eu sou
                 </span>
-                <h1>Nathália de Bona</h1>
+                
+                <h1>Nathália de Bona<span class="ponto">.</span></h1>
+                
                 <h2 data-pt="Desenvolvedora front-end criando experiências web bonitas e funcionais, um projeto de cada vez."
                     data-en="Front-end developer creating beautiful and functional web experiences, one project at a time.">
                     Desenvolvedora front-end criando experiências web bonitas e funcionais, um projeto de cada vez.
                 </h2>
-                <p data-pt="Ainda estou no começo da minha jornada, mas quero mostrar minha evolução durante esse tempo."
-                    data-en="I am still at the beginning of my journey, but I want to show my progress over this time.">
-                    Ainda estou no começo da minha jornada, mas quero mostrar minha evolução durante esse tempo.
-                </p>
-                <a href="#projetos" class="btn"
-                    data-pt="Ver projetos" data-en="See my work">
-                    Ver projetos
-                </a>
+        
+                <div class="hero-botoes">
+                    <a href="#projetos" class="btn"
+                        data-pt="Ver projetos" data-en="See my work">
+                        Ver projetos
+                    </a>
+
+                    <a href="#contato" class="btn btn-contorno"
+                        data-pt="Falar comigo" data-en="Talk to me">
+                        Falar comigo
+                    </a>
+                </div>
             </div>
 
-            <img src="imagens/nathalia.png" alt="Foto de Nathália de Bona">
+            <div class="hero-foto">
+                <img src="imagens/nathalia.webp" alt="Foto de Nathália de Bona">
+            
+                <span aria-hidden="true" class="enfeite enfeite-estrela">✦</span>
+                <span aria-hidden="true" class="enfeite enfeite-brilho">✧</span>
+            </div>
         </section>
 
-        <section id="sobre">
+        <div class="faixa">
+            <span>HTML</span>
+            <span aria-hidden="true" class="faixa-enfeite">✦</span>
+            <span>CSS</span>
+            <span aria-hidden="true" class="faixa-enfeite">✦</span>
+            <span>JavaScript</span>
+            <span aria-hidden="true" class="faixa-enfeite">✦</span>
+            <span>Git &amp; GitHub</span>
+        </div>
+
+        <section id="sobre" class="revelar">
             <h2 data-pt="Sobre mim" data-en="About me">
                 Sobre mim
             </h2>
 
-            <p data-pt="&quot;Minha jornada na programação começou em 2019, quando ganhei um curso de lógica de programação de presente. Me apaixonei na hora — mas por anos enfrentei ciclos de estudar, parar e me frustrar sem entender bem o porquê."
-                data-en="My programming journey began in 2019, when I received a programming logic course as a gift. I fell in love with it instantly—but for years, I went through cycles of studying, stopping, and getting frustrated without really understanding why.">
-                Minha jornada na programação começou em 2019, quando ganhei um curso de lógica de programação de presente. Me apaixonei na hora — mas por anos enfrentei ciclos de estudar, parar e me frustrar sem entender bem o porquê.
-            </p>
+            <div class="sobre-texto">
+                <p data-pt="Comecei a programar em 2019, quando ganhei um curso de lógica de presente, e me apaixonei na hora. Passei anos entre estudar, parar e recomeçar, mas a vontade de criar nunca foi embora."
+                    data-en="I started programming in 2019, when I was given a logic course as a gift, and I fell in love right away. I spent years going back and forth between studying, stopping and starting over, but the desire to create never went away.">
+                    Comecei a programar em 2019, quando ganhei um curso de lógica de presente, e me apaixonei na hora. Passei anos entre estudar, parar e recomeçar, mas a vontade de criar nunca foi embora.
+                </p>
 
-            <p data-pt="Em 2026 voltei mais dedicada do que nunca. Um diagnóstico de TDAH trouxe clareza sobre toda essa jornada: ser autodidata sem um ritmo estruturado era genuinamente difícil. Hoje, com mais autoconhecimento e as ferramentas certas, consigo manter o foco — e isso se reflete na quantidade de projetos que embarquei em pouco tempo."
-                data-en="In 2026, I returned more dedicated than ever. An ADHD diagnosis brought clarity to this entire journey: being self-taught without a structured pace was genuinely difficult. Today, with greater self-awareness and the right tools, I am able to stay focused—and this is reflected in the number of projects I’ve taken on in a short time.">
-                Em 2026 voltei mais dedicada do que nunca. Um diagnóstico de TDAH trouxe clareza sobre toda essa jornada: ser autodidata sem um ritmo estruturado era genuinamente difícil. Hoje, com mais autoconhecimento e as ferramentas certas, consigo manter o foco — e isso se reflete na quantidade de projetos que embarquei em pouco tempo.
-            </p>
+                <p data-pt="Em 2026 voltei com uma rotina de estudos e muito mais dedicação, e isso aparece nos mais de 20 projetos que já construí, todos feitos do zero com HTML, CSS e JavaScript puro."
+                    data-en="In 2026 I came back with a study routine and much more dedication, and it shows in the more than 20 projects I’ve built, all made from scratch with plain HTML, CSS and JavaScript.">
+                    Em 2026 voltei com uma rotina de estudos e muito mais dedicação, e isso aparece nos mais de 20 projetos que já construí, todos feitos do zero com HTML, CSS e JavaScript puro.
+                </p>
 
-            <p data-pt="Sou apaixonada por estética, natureza, crochê e tudo que envolve criar algo bonito. Esse amor pelo visual influencia diretamente o jeito que desenvolvo — sempre buscando experiências que sejam funcionais e agradáveis ao mesmo tempo.&quot;"
-                data-en="I am passionate about aesthetics, nature, crochet, and everything that involves creating something beautiful. This love for the visual directly influences the way I develop—always seeking experiences that are both functional and pleasing.&quot;">
-                Sou apaixonada por estética, natureza, crochê e tudo que envolve criar algo bonito. Esse amor pelo visual influencia diretamente o jeito que desenvolvo — sempre buscando experiências que sejam funcionais e agradáveis ao mesmo tempo.
-            </p>
-        </section>
+                <p data-pt="Sou apaixonada por estética, natureza e por criar coisas bonitas, e isso guia o jeito que construo: um projeto de cada vez, cuidando dos detalhes, buscando experiências que sejam ao mesmo tempo funcionais e agradáveis."
+                    data-en="I’m passionate about aesthetics, nature and creating beautiful things, and that guides the way I build: one project at a time, caring about the details, aiming for experiences that are both functional and pleasant.">
+                    Sou apaixonada por estética, natureza e por criar coisas bonitas, e isso guia o jeito que construo: um projeto de cada vez, cuidando dos detalhes, buscando experiências que sejam ao mesmo tempo funcionais e agradáveis.
+                </p>
 
-        <section id="habilidades">
-            <h2 data-pt="Habilidades" data-en="Skills">
-                Habilidades
-            </h2>
-
-            <div class="habilidades-grid">
-
-                <!-- Técnicas -->
-                <div class="hab-coluna">
-                    <p class="hab-cat-titulo" data-pt="Técnicas" data-en="Technical">Técnicas</p>
-                    <div class="hab-icones">
-                        <div class="hab-icone-item">
-                            <i class="devicon-html5-plain"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="hab-icone-item">
-                            <i class="devicon-css3-plain"></i>
-                            <span>CSS</span>
-                        </div>
-                        <div class="hab-icone-item">
-                            <i class="devicon-javascript-plain"></i>
-                            <span>JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hab-divisor"></div>
-
-                <!-- Ferramentas -->
-                <div class="hab-coluna">
-                    <p class="hab-cat-titulo" data-pt="Ferramentas" data-en="Tools">Ferramentas</p>
-                    <ul class="hab-lista">
-                        <li>VS Code</li>
-                        <li>Git & Github</li>
-                        <li>Chrome DevTools</li>
-                        <li>Google Fonts</li>
-                        <li>Font Awesome</li>
-                    </ul>
-                </div>
-
-                <div class="hab-divisor"></div>
-
-                <!-- Pessoais -->
-                <div class="hab-coluna">
-                    <p class="hab-cat-titulo" data-pt="Pessoais" data-en="Personal">Pessoais</p>
-                    <ul class="hab-lista">
-                        <li data-pt="Atenção a detalhes" data-en="Attention to detail">Atenção a detalhes</li>
-                        <li data-pt="Adaptabilidade" data-en="Adaptability">Adaptabilidade</li>
-                        <li data-pt="Dedicação" data-en="Dedication">Dedicação</li>
-                        <li data-pt="Senso estético" data-en="Aesthetic sense">Senso estético</li>
-                    </ul>
-                </div>
-
+                <p data-pt="Estou aberta a oportunidades e adoro trocar ideia com gente da área. O contato está logo aí embaixo."
+                    data-en="I’m open to opportunities and love chatting with people in the field. You’ll find my contact right below.">
+                    Estou aberta a oportunidades e adoro trocar ideia com gente da área. O contato está logo aí embaixo.
+                </p>
             </div>
         </section>
 
-        <div class="divisor">✦ ✧ ✦</div>
+        <section id="habilidades" class="revelar">
+            <div class="habilidades-bloco">
+                <h2 data-pt="Habilidades" data-en="Skills">
+                    Habilidades
+                </h2>
 
-        <section id="projetos">
-            <h2 data-pt="Projetos" data-en="Projects">
-                Projetos
-            </h2>
+                <div class="habilidades-grid">
+                    <!-- Técnicas -->
+                    <div class="hab-coluna">
+                        <p class="hab-cat-titulo" data-pt="Técnicas" data-en="Technical">Técnicas</p>
+                        
+                       <ul class="hab-lista">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                       </ul>
 
-            <p class="projetos-subtitulo" data-pt="Alguns dos meus trabalhos mais recentes" 
-                data-en="Some of my most recent work">
-                Alguns dos meus trabalhos mais recentes
-            </p>
-
-            <div class="carrossel">
-                <button class="seta seta-prev"><i class="fa-solid fa-chevron-left"></i></button>
-
-                <div class="carrossel-track">
-
-                    <div class="carrossel-slide">
-                        <div class="laptop-mockup">
-                            <div class="laptop-tela">
-                                <div class="laptop-camera"></div>
-                                <img src="imagens/projetos/vanity/hero.webp" alt="Screenshot do projeto Holy Kitchen V2">
-                            </div>
-                            <div class="laptop-base"></div>
-                            <div class="laptop-pe"></div>
-                            <div class="overlay">
-                                <h4>Vanity</h4>
-                                <a href="projetos.html#vanity">Ver projeto</a>
-                            </div>
-                        </div>  
                     </div>
 
-                    <div class="carrossel-slide">
-                        <div class="laptop-mockup">
-                            <div class="laptop-tela">
-                                <div class="laptop-camera"></div>
-                                <img src="imagens/projetos/focus-flow/hero.webp" alt="Screenshot do projeto Holy Kitchen V2">
-                            </div>
-                            <div class="laptop-base"></div>
-                            <div class="laptop-pe"></div>
-                            <div class="overlay">
-                                <h4>Focus Flow</h4>
-                                <a href="projetos.html#focus-flow">Ver projeto</a>
-                            </div>
-                        </div>
+                    <!-- Ferramentas -->
+                    <div class="hab-coluna">
+                        <p class="hab-cat-titulo" data-pt="Ferramentas" data-en="Tools">Ferramentas</p>
+                        
+                        <ul class="hab-lista">
+                            <li>VS Code</li>
+                            <li>Git &amp; GitHub</li>
+                            <li>Chrome DevTools</li>
+                            <li>Google Fonts</li>
+                            <li>Font Awesome</li>
+                        </ul>
                     </div>
-
-                    <div class="carrossel-slide">
-                        <div class="laptop-mockup">
-                            <div class="laptop-tela">
-                                <div class="laptop-camera"></div>
-                                <img src="imagens/projetos/kairo/hero.webp" alt="Screenshot do projeto Holy Kitchen V2">
-                            </div>
-                            <div class="laptop-base"></div>
-                            <div class="laptop-pe"></div>
-                            <div class="overlay">
-                                <h4>Kairo</h4>
-                                <a href="projetos.html#kairo">Ver projeto</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carrossel-slide">
-                        <div class="laptop-mockup">
-                            <div class="laptop-tela">
-                                <div class="laptop-camera"></div>
-                                <img src="imagens/projetos/holy-kitchen-v2/hero.webp" alt="Screenshot do projeto Holy Kitchen V2">
-                            </div>
-                            <div class="laptop-base"></div>
-                            <div class="laptop-pe"></div>
-                            <div class="overlay">
-                                <h4>Holy Kitchen! V2</h4>
-                                <a href="projetos.html#holy-kitchen-v2">Ver projeto</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="seta seta-next"><i class="fa-solid fa-chevron-right"></i></button>
-
-                <div class="carrossel-controles">
-
-                    <div class="carrossel-tracinhos">
-                        <button class="tracinho ativo"></button>
-                        <button class="tracinho"></button>
-                        <button class="tracinho"></button>
-                        <button class="tracinho"></button>
+                    
+                    <!-- Pessoais -->
+                    <div class="hab-coluna">
+                        <p class="hab-cat-titulo" data-pt="Pessoais" data-en="Personal">Pessoais</p>
+                        
+                        <ul class="hab-lista">
+                            <li data-pt="Atenção a detalhes" data-en="Attention to detail">Atenção a detalhes</li>
+                            <li data-pt="Adaptabilidade" data-en="Adaptability">Adaptabilidade</li>
+                            <li data-pt="Dedicação" data-en="Dedication">Dedicação</li>
+                            <li data-pt="Senso estético" data-en="Aesthetic sense">Senso estético</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <a href="projetos.html" class="btn-todos" 
-                data-pt="Ver todos os projetos" data-en="See all projects">
-                Ver todos os projetos
-            </a>
         </section>
 
-        <div class="divisor">✦ ✧ ✦</div>
+        <section id="projetos" class="revelar">
+            <div class="projetos-topo">
+                <h2 data-pt="Projetos" data-en="Projects">
+                    Projetos
+                </h2>
 
-        <section id="contato">
-            <h2 data-pt="Vamos conversar?" data-en="Let's talk?">
-                Vamos conversar?
-            </h2>
+                <a href="projetos.html" class="link-todos"
+                    data-pt="Ver todos os projetos →"
+                    data-en="See all projects →">
+                    Ver todos os projetos →
+                </a>
+            </div>
 
-            <p data-pt="Seja para um projeto, uma troca ou só para dizer oi — estou por aqui. 😊"
-                data-en="Whether it’s for a project, an exchange, or just to say hi — I’m around. 😊">
-                Seja para um projeto, uma troca ou só para dizer oi — estou por aqui. 😊
-            </p>
+            <div class="projetos-destaque">
+                <a href="projeto.html?id=sprint-planner" class="card-destaque">
+                    <img src="imagens/projetos/sprint-planner/principal.webp" alt="Página inicial do site Sprint">
+
+                    <div class="card-rodape">
+                        <span class="card-nome">Sprint</span>
+                        <span class="card-link"
+                            data-pt="Ver projeto →" data-en="See project →">
+                            Ver projeto →
+                        </span>
+                    </div>
+                </a>
+
+                <a href="projeto.html?id=glow-republic" class="card-destaque">
+                    <img src="imagens/projetos/glow-republic/hero.webp" alt="Hero do site Glow Republic">
+
+                    <div class="card-rodape">
+                        <span class="card-nome">Glow Republic</span>
+                        <span class="card-link"
+                            data-pt="Ver projeto →" data-en="See project →">
+                            Ver projeto →
+                        </span>
+                    </div>
+                </a>
+
+                <a href="projeto.html?id=kairo" class="card-destaque">
+                    <img src="imagens/projetos/kairo/hero.webp" alt="Hero do site Kairo">
+
+                    <div class="card-rodape">
+                        <span class="card-nome">Kairo</span>
+                        <span class="card-link"
+                            data-pt="Ver projeto →" data-en="See project →">
+                            Ver projeto →
+                        </span>
+                    </div>
+                </a>
+
+                <a href="projeto.html?id=vanity" class="card-destaque">
+                    <img src="imagens/projetos/vanity/hero.webp" alt="Hero do site Vanity">
+
+                    <div class="card-rodape">
+                        <span class="card-nome">Vanity</span>
+                        <span class="card-link"
+                            data-pt="Ver projeto →" data-en="See project →">
+                            Ver projeto →
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section id="contato" class="revelar">
+            <div class="contato-intro">
+                <h2 data-pt="Vamos conversar?" data-en="Let's talk?">
+                    Vamos conversar?
+                </h2>
+
+                <p data-pt="Seja para um projeto, uma troca ou só para dizer oi, estou por aqui."
+                    data-en="Whether it’s for a project, an exchange, or just to say hi, I’m around.">
+                    Seja para um projeto, uma troca ou só para dizer oi, estou por aqui.
+                </p>
+            </div>
 
             <form action="https://formspree.io/f/mzdllqvn" method="POST" id="form-contato">
+                <div class="campo">
+                    <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
 
-                <label for="nome" data-pt="Nome" data-en="Name">Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome"
-                        data-placeholder-pt="Seu nome" data-placeholder-en="Your name">
+                <div class="campo">
+                    <label for="email" data-pt="E-mail" data-en="E-mail">E-mail</label>
+                    <input type="email" id="email" name="email">
+                </div>
 
-                <label for="email" data-pt="E-mail" data-en="E-mail">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com"
-                        data-placeholder-pt="seu@email.com" data-placeholder-en="your@email.com">
-
-                <label for="mensagem" data-pt="Mensagem"
-                        data-en="Message">
-                        Mensagem</label>
-                <textarea name="mensagem" id="mensagem" placeholder="Escreva sua mensagem aqui" rows="5"
-                        data-placeholder-pt="Escreva sua mensagem aqui"
-                        data-placeholder-en="Write your message here">
-                </textarea>
+                <div class="campo">
+                    <label for="mensagem" data-pt="Mensagem"
+                            data-en="Message">
+                            Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="5"></textarea>
+                </div>
 
                 <button type="submit" data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</button>
             </form>
-
-            <div class="redes-sociais">
-                <a href="https://github.com/nathaliadebona"><i class="fa-brands fa-github"></i> Github</a>
-                <a href="https://www.linkedin.com/in/nathaliadalila/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
         </section>
     </main>
 
     <footer>
-        <p data-pt="Desenvolvido por Nathália de Bona" data-en="Developed by Nathália de Bona">
-            Desenvolvido por Nathália de Bona
-        </p>
+        <p>&#169; 2026 Nathália de Bona</p>
 
         <div class="redes-sociais">
-            <a href="https://github.com/nathaliadebona"><i class="fa-brands fa-github"></i> Github</a>
-            <a href="https://www.linkedin.com/in/nathaliadalila/"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/nathaliadebona">GitHub</a>
+            <a href="https://www.linkedin.com/in/nathaliadalila/">LinkedIn</a>
         </div>
-
-        <p>&#169; 2026 Nathália de Bona</p>
     </footer>
 
-    <button id="btn-topo">
+    <button id="btn-topo" aria-label="Voltar ao topo">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 

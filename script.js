@@ -23,20 +23,22 @@ btnTopo.addEventListener('click', () => {
 });
 
 let idiomaAtual = "pt";
-const btnIdioma = document.querySelector('#toggle-idioma');
+const botoesIdioma = document.querySelectorAll('#toggle-idioma, #toggle-idioma-mobile');
 
-const elementos = document.querySelectorAll('[data-pt]');
-
-btnIdioma.addEventListener('click', () => {
+function trocarIdioma() {
     if (idiomaAtual === "pt") {
         idiomaAtual = "en";
-        btnIdioma.textContent = "PT"
         document.documentElement.lang = "en";
     } else {
         idiomaAtual = "pt";
-        btnIdioma.textContent = "EN"
         document.documentElement.lang = "pt";
     }
+
+    botoesIdioma.forEach((botao) => {
+        botao.textContent = idiomaAtual === "pt" ? "EN" : "PT";
+    });
+
+    const elementos = document.querySelectorAll('[data-pt]');
 
     elementos.forEach((elemento) => {
         if (idiomaAtual === "pt") {
@@ -45,6 +47,14 @@ btnIdioma.addEventListener('click', () => {
             elemento.textContent = elemento.dataset.en;
         }
     });
+
+    if (typeof mostrarProjetos === 'function') {
+        mostrarProjetos();
+    }
+}
+
+botoesIdioma.forEach((botao) => {
+    botao.addEventListener('click', trocarIdioma);
 });
 
 const secoes = document.querySelectorAll('section');
@@ -65,50 +75,19 @@ const observer = new IntersectionObserver((entradas) => {
 
 secoes.forEach(secao => observer.observe(secao));
 
-// FUNÇÃO TYPEWRITER
-function typewriter(elemento) {
-    const texto = elemento.textContent;
-    elemento.textContent = '';
-    let i = 0;
+// APARECER AO ROLAR
+const elementosRevelar = document.querySelectorAll('.revelar');
 
-    const intervalo = setInterval(() => {
-        elemento.textContent += texto[i];
-        i++;
-        if (i === texto.length) {
-            clearInterval(intervalo);
+const observerRevelar = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add('revelado');
+            observerRevelar.unobserve(entrada.target);
         }
-    }, 100);
-}
+    });
+}, { threshold: 0.15 });
 
-// TYPEWRITER NO H1 (repete infinito)
-const h1 = document.querySelector('#hero h1');
-if (h1) {
-    const textoH1 = h1.textContent;
-    h1.textContent = '';
-    let i = 0;
-    let apagando = false;
-    let esperando = false;
-
-    setInterval(() => {
-        if (apagando) {
-            h1.textContent = textoH1.substring(0, i);
-            i--;
-            if (i < 0) {
-                apagando = false;
-                esperando = false;
-            }
-        } else {
-            h1.textContent = textoH1.substring(0, i);
-            if (i <= textoH1.length) i++;
-            if (i > textoH1.length && !esperando) {
-                esperando = true;
-                setTimeout(() => {
-                    apagando = true;
-                }, 800);
-            }
-        }
-    }, 100);
-}
+elementosRevelar.forEach(elemento => observerRevelar.observe(elemento));
 
 // FORMULARIO
 const form = document.querySelector('#form-contato');
@@ -136,65 +115,94 @@ if (form) {
 const btnMenu = document.querySelector('#btn-menu');
 const menu = document.querySelector('header ul');
 
+const rotuloMenu = btnMenu.querySelector('span');
+
+function atualizarRotuloMenu() {
+    const aberto = menu.classList.contains('aberto');
+
+    rotuloMenu.dataset.pt = aberto ? 'Fechar' : 'Menu';
+    rotuloMenu.dataset.en = aberto ? 'Close' : 'Menu';
+    rotuloMenu.textContent = rotuloMenu.dataset[idiomaAtual];
+
+    btnMenu.setAttribute('aria-expanded', aberto);
+}
+
 btnMenu.addEventListener('click', () => {
     menu.classList.toggle('aberto');
+    atualizarRotuloMenu();
 });
 
 linksMenu.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('aberto');
+        atualizarRotuloMenu();
     });
 });
 
 document.addEventListener('click', (evento) => {
     if (!menu.contains(evento.target) && !btnMenu.contains(evento.target)) {
         menu.classList.remove('aberto');
+        atualizarRotuloMenu();
     }
 });
 
-// CARROSSEL
-const track = document.querySelector('.carrossel-track');
-const slides = document.querySelectorAll('.carrossel-slide');
 
-if (track) {
-    const tracinhos = document.querySelectorAll('.tracinho');
-    const setaPrev = document.querySelector('.seta-prev');
-    const setaNext = document.querySelector('.seta-next');
-    let slideAtual = 0;
 
-    function trocarSlide() {
-        track.style.transform = `translateX(${slideAtual * -100}%)`;
 
-        tracinhos.forEach(tracinho => tracinho.classList.remove('ativo'));
-        tracinhos[slideAtual].classList.add('ativo');
+// CURSOR COM BRILHO
+const temMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const prefereMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+if (temMouse && !prefereMenosMovimento) {
+    const brilho = document.createElement('span');
+    brilho.className = 'cursor-brilho';
+    brilho.setAttribute('aria-hidden', 'true');
+    brilho.textContent = '✦';
+    document.body.appendChild(brilho);
+
+    const deslocamento = 16;
+    const suavidade = 0.15;
+    let alvoX = 0;
+    let alvoY = 0;
+    let brilhoX = 0;
+    let brilhoY = 0;
+    let animando = false;
+
+    function moverBrilho() {
+        brilhoX += (alvoX - brilhoX) * suavidade;
+        brilhoY += (alvoY - brilhoY) * suavidade;
+
+        brilho.style.transform = `translate3d(${brilhoX}px, ${brilhoY}px, 0)`;
+
+        if (Math.abs(alvoX - brilhoX) > 0.1 || Math.abs(alvoY - brilhoY) > 0.1) {
+            requestAnimationFrame(moverBrilho);
+        } else {
+            animando = false;
+        }
     }
 
-    setaNext.addEventListener('click', () => {
-        if (slideAtual < slides.length - 1) {
-            slideAtual++;
-        } else {
-                slideAtual = 0;
+    document.addEventListener('mousemove', (evento) => {
+        alvoX = evento.clientX + deslocamento;
+        alvoY = evento.clientY + deslocamento;
+
+        if (!brilho.classList.contains('ativo')) {
+            brilhoX = alvoX;
+            brilhoY = alvoY;
+            brilho.classList.add('ativo');
         }
-        trocarSlide();
+
+        if (!animando) {
+            animando = true;
+            requestAnimationFrame(moverBrilho);
+        }
     });
 
-    setaPrev.addEventListener('click', () => {
-        if (slideAtual === 0) {
-            slideAtual = slides.length - 1;
-        } else {
-            slideAtual--;
-        }
-        trocarSlide();
+    document.addEventListener('mouseover', (evento) => {
+        const clicavel = evento.target.closest('a, button, input, textarea, select, label');
+        brilho.classList.toggle('sobre-clicavel', Boolean(clicavel));
     });
 
-    setInterval(() => {
-        if (slideAtual < slides.length - 1) {
-            slideAtual++;
-        } else {
-            slideAtual = 0;
-        }
-        trocarSlide()
-    }, 4000);
+    document.documentElement.addEventListener('mouseleave', () => {
+        brilho.classList.remove('ativo');
+    });
 }
-

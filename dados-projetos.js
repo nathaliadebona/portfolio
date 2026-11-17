@@ -1,0 +1,623 @@
+const projetos = {
+    'kairo': {
+        nome: 'Kairo',
+        tipo: 'app',
+        destaque: true,
+        imagem: 'imagens/projetos/kairo/hero.webp',
+        descricao: {
+            pt: 'App de gestão para assistentes virtuais e freelancers, nascido da minha própria rotina de trabalho. Reúne em um só lugar o que antes ficava espalhado entre Clockify, Notion e Google Sheets: registro de tempo, tarefas por cliente e controle financeiro.',
+            en: 'Management app for virtual assistants and freelancers, born from my own work routine. It brings together in one place what used to be scattered across Clockify, Notion and Google Sheets: time tracking, client tasks and financial control.'
+        },
+        link: 'https://nathaliadebona.github.io/kairo/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/kairo',
+        resumo: {
+            pt: 'App para assistentes virtuais controlarem tempo, tarefas e fechamento financeiro por cliente, tudo em um só lugar.',
+            en: 'App for virtual assistants to track time, tasks and monthly billing per client, all in one place.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'Flatpickr'],
+        galeria : [
+            'imagens/projetos/kairo/galeria-1.webp',
+            'imagens/projetos/kairo/galeria-2.webp',
+            'imagens/projetos/kairo/galeria-3.webp'
+        ]
+    },
+
+    'vanity': {
+        nome: 'Vanity',
+        tipo: 'backend',
+        destaque: true,
+        imagem: 'imagens/projetos/vanity/hero.webp',
+        descricao: {
+            pt: 'App de reviews de produtos de beleza — a ideia veio de uma amiga e eu amei tanto que resolvi construir. Meu projeto mais desafiador até agora e os primeiros passos reais em backend: cadastro e login de usuários, perfis, avaliações e muito mais. A estética é tudo que eu gosto — e as funcionalidades, tudo que nunca tinha feito antes.',
+            en: 'Beauty product review app — the idea came from a friend and I loved it so much I decided to build it. My most challenging project yet and my first real steps in backend: user registration and login, profiles, reviews and much more. The aesthetic is everything I love — and the features, everything I had never done before.'
+        },
+        link: 'https://nathaliadebona.github.io/vanity/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/vanity',
+        resumo: {       
+            pt: 'App de reviews de produtos de beleza, com cadastro, perfis e avaliações dos produtos que você usa.',
+            en: 'Beauty product review app with sign-up, profiles and reviews of the products you use.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
+        galeria: [
+            'imagens/projetos/vanity/galeria-1.webp',
+            'imagens/projetos/vanity/galeria-2.webp',
+            'imagens/projetos/vanity/galeria-3.webp'
+        ]
+    },
+
+    'sprint-planner': {
+        nome: 'Sprint',
+        tipo: 'pagina-unica',
+        destaque: true,
+        imagem: 'imagens/projetos/sprint-planner/principal.webp',
+        descricao: {
+            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista: bordas grossas, sombras duras, adesivos levemente girados e botões que afundam ao clicar. As páginas do planner são desenhadas só com HTML e CSS, e a galeria rola na horizontal no celular. Construída pensando primeiro no celular.',
+            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style: thick borders, hard shadows, slightly rotated stickers and buttons that press down on click. The planner pages are drawn with just HTML and CSS, and the gallery scrolls horizontally on mobile. Designed mobile-first.'
+        },
+        link: 'https://nathaliadebona.github.io/sprint-planner/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/sprint-planner',
+        resumo: {
+            pt: 'Landing page de um planner fictício de rotina e produtividade, em estilo neo-brutalista.',
+            en: 'Landing page for a fictional routine and productivity planner, in a neo-brutalist style.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/sprint-planner/galeria-1.webp',
+            'imagens/projetos/sprint-planner/galeria-2.webp',
+            'imagens/projetos/sprint-planner/galeria-3.webp'
+        ]
+    },
+
+    'primeiro-commit': {
+        nome: 'Primeiro Commit',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/primeiro-commit/principal.webp',
+        descricao: {
+            pt: 'Landing page de conversão para uma mentoria fictícia de front-end, pensada para quem quer sair do zero e chegar ao primeiro portfólio. O visual brinca com o Git: um terminal digita um commit no topo da página e a trilha da mentoria aparece como um git log. São sete seções, até um formulário de lista de espera com validação personalizada.',
+            en: 'Conversion landing page for a fictional front-end mentorship, made for people who want to go from zero to their first portfolio. The look plays with Git: a terminal types a commit at the top of the page and the mentorship path appears as a git log. Seven sections lead to a waitlist form with custom validation.'
+        },
+        link: 'https://nathaliadebona.github.io/primeiro-commit/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/primeiro-commit',
+        resumo: {
+            pt: 'Landing page de uma mentoria fictícia para quem quer entrar em front-end, com foco em conversão.',
+            en: 'Landing page for a fictional mentorship for people breaking into front-end, focused on conversion.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/primeiro-commit/galeria-1.webp',
+            'imagens/projetos/primeiro-commit/galeria-2.webp',
+            'imagens/projetos/primeiro-commit/galeria-3.webp'
+        ]
+    },
+
+    'fio-e-linha': {
+        nome: 'Fio & Linha',
+        tipo: 'backend',
+        destaque: false,
+        imagem: 'imagens/projetos/fio-e-linha/principal.webp',
+        descricao: {
+            pt: 'Sistema de controle de estoque para uma loja fictícia de roupa feminina. A equipe cadastra as peças por categoria e tamanho, dá baixa nas vendas em poucos cliques, consulta o histórico, registra devoluções sem perder a venda original e gerencia quem tem acesso. Meu projeto de aprendizado com um backend simples: Node.js e Express guardando os dados em arquivos JSON, com login por token e senhas protegidas com hash.',
+            en: 'Inventory control system for a fictional women\'s clothing store. The team registers items by category and size, records sales in a few clicks, checks the history, logs returns without losing the original sale and manages who has access. My learning project with a simple backend: Node.js and Express storing data in JSON files, with token login and hashed passwords.'
+        },
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/fio-e-linha',
+        resumo: {
+            pt: 'Controle de estoque para uma loja fictícia de roupas, com vendas, devoluções e login, usando Node.js e Express.',
+            en: 'Inventory control for a fictional clothing store, with sales, returns and login, built with Node.js and Express.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express', 'JSON'],
+        galeria: [
+            'imagens/projetos/fio-e-linha/galeria-1.webp',
+            'imagens/projetos/fio-e-linha/galeria-2.webp',
+            'imagens/projetos/fio-e-linha/galeria-3.webp'
+        ]
+    },
+
+    'cherry-pop': {
+        nome: 'Cherry Pop',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/cherry-pop/hero.webp',
+        descricao: {
+            pt: 'Loja fictícia de sorvetes e doces estilo retrô americano com visual bem diferente de tudo que havia feito antes. Além do carrinho de compras, trouxe duas funcionalidades inéditas: um quiz de personalidade que indica o sorvete ideal e um monte-seu-sundae interativo.',
+            en: 'Fictional retro American-style ice cream and candy shop with a look very different from anything I had done before. In addition to the shopping cart, I brought two brand-new features: a personality quiz that suggests your ideal ice cream and an interactive build-your-own-sundae.'
+        },
+        link: 'https://nathaliadebona.github.io/cherry-pop/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cherry-pop',
+        resumo: {
+            pt: 'Loja fictícia de sorvetes de estilo retrô, com carrinho, quiz de personalidade e monte-seu-sundae.',
+            en: 'Fictional retro-style ice cream shop with a shopping cart, a personality quiz and a build-your-own-sundae.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
+        galeria: [
+            'imagens/projetos/cherry-pop/galeria-1.webp',
+            'imagens/projetos/cherry-pop/galeria-2.webp',
+            'imagens/projetos/cherry-pop/galeria-3.webp'
+        ]
+    },
+
+    'holly-desserts': {
+        nome: 'Holly Desserts',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/holly-desserts/principal.webp',
+        descricao: {
+            pt: 'Um dos primeiros projetos que fiz sozinha, depois de alguns sites feitos acompanhando um curso. É uma página simples com a receita de cookies, em HTML e CSS básicos. Longe de ser bonito, mas foi um passo importante na minha evolução.',
+            en: 'One of the first projects I built on my own, after a few sites made while following a course. A simple page with a cookie recipe, built with basic HTML and CSS. Far from beautiful, but an important step in my progress.'
+        },
+        link: 'https://nathaliadebona.github.io/holly-desserts/',
+        ano: 2024,
+        github: 'https://github.com/nathaliadebona/holly-desserts',
+        resumo: {
+            pt: 'Um dos meus primeiros projetos feitos sozinha: uma página única com a receita de cookies.',
+            en: 'One of my first projects built on my own: a single page with a cookie recipe.'
+        },
+        tecnologias: ['HTML', 'CSS'],
+        galeria: [
+            'imagens/projetos/holly-desserts/galeria-1.webp'
+        ]
+    },
+
+    'holy-kitchen-v1': {
+        nome: 'Holy Kitchen! V1',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/holy-kitchen/principal.webp',
+        descricao: {
+            pt: 'Site de receitas culinárias com várias páginas: receitas doces e salgadas, dicas, contato e menu hambúrguer. Foi o meu primeiro site multi-páginas — um salto claro em relação ao anterior, mesmo que a estética ainda estivesse engatinhando.',
+            en: 'A culinary recipe website with multiple pages: sweet and savory recipes, tips, contact and a hamburger menu. It was my first multi-page website — a clear step up from the previous one, even though the aesthetic was still finding its footing.'
+        },
+        link: 'https://nathaliadebona.github.io/holy-kitchen/',
+        ano: 2024,
+        github: 'https://github.com/nathaliadebona/holy-kitchen',
+        resumo: {
+            pt: 'Site de receitas doces e salgadas, com dicas, contato e menu hambúrguer. Meu primeiro site multi-páginas.',
+            en: 'Sweet and savory recipe website with tips, contact and a hamburger menu. My first multi-page website.'
+        },
+        tecnologias: ['HTML', 'CSS'],
+        galeria: [
+            'imagens/projetos/holy-kitchen/galeria-1.webp',
+            'imagens/projetos/holy-kitchen/galeria-2.webp',
+            'imagens/projetos/holy-kitchen/galeria-3.webp'
+        ]
+    },
+
+    'cambio-facil': {
+        nome: 'CâmbioFácil',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/cambio-facil/hero.webp',
+        descricao: {
+            pt: 'Conversor de moedas entre BRL, USD, EUR e GBP com taxas fixas. Meu primeiro projeto focado em JavaScript — foi aqui que aprendi a usar objetos como tabela de dados, notação de colchetes para acesso dinâmico e validação de entrada. Simples, mas cheio de lógica.',
+            en: 'A currency converter between BRL, USD, EUR and GBP with fixed rates. My first JavaScript-focused project — this is where I learned to use objects as data tables, bracket notation for dynamic access and input validation. Simple, but full of logic.'
+        },
+        link: 'https://nathaliadebona.github.io/cambio-facil/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cambio-facil',
+        resumo: {
+            pt: 'Conversor de moedas fictício, direto e sem jargão, entre real, dólar, euro e libra.',
+            en: 'A fictional currency converter, straightforward and jargon-free, between BRL, USD, EUR and GBP.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/cambio-facil/galeria-1.webp',
+            'imagens/projetos/cambio-facil/galeria-2.webp'
+        ]
+    },
+
+    'task-flow': {
+        nome: 'TaskFlow',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/task-flow/principal.webp',
+        descricao: {
+            pt: 'App de lista de tarefas para freelancers e pequenos empreendedores. Permite adicionar, marcar como concluída, excluir tarefas e limpar as concluídas de uma vez. Os dados persistem entre recarregamentos via localStorage. Foi onde aprendi a criar elementos dinamicamente com createElement e a organizar código em funções reutilizáveis.',
+            en: 'A task list app for freelancers and small entrepreneurs. Allows adding, marking as complete, deleting tasks and clearing completed ones at once. Data persists between reloads via localStorage. This is where I learned to create elements dynamically with createElement and organize code into reusable functions.'
+        },
+        link: 'https://nathaliadebona.github.io/task-flow/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/task-flow',
+        resumo: {
+            pt: 'Lista de tarefas fictícia para freelancers e pequenos empreendedores, simples e sem cadastro.',
+            en: 'A fictional to-do list for freelancers and small business owners, simple and with no sign-up.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/task-flow/principal.webp'
+        ]
+    },
+
+    'cafe-velvet': {
+        nome: 'Café Velvet',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/cafe-velvet/hero.webp',
+        descricao: {
+            pt: 'Site institucional de uma cafeteria fictícia em Florianópolis com cinco páginas: Home, Sobre, Cardápio, Galeria e Contato. Inclui tabelas de preços com zebra striping, galeria em CSS Grid e formulário de contato. Um dos meus primeiros trabalhos mais completos, feito só com HTML e CSS.',
+            en: 'Institutional website for a fictional coffee shop in Florianópolis with five pages: Home, About, Menu, Gallery and Contact. Includes price tables with zebra striping, a CSS Grid gallery and a contact form. One of my first most complete projects, built with HTML and CSS only.'
+        },
+        link: 'https://nathaliadebona.github.io/cafe-velvet/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/cafe-velvet',
+        resumo: {
+            pt: 'Site institucional de uma cafeteria fictícia em Florianópolis, com cardápio em tabelas, galeria e contato.',
+            en: 'Institutional website for a fictional coffee shop in Florianópolis, with a menu in tables, a gallery and a contact page.'
+        },
+        tecnologias: ['HTML', 'CSS', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/cafe-velvet/galeria-1.webp',
+            'imagens/projetos/cafe-velvet/galeria-2.webp',
+            'imagens/projetos/cafe-velvet/galeria-3.webp'
+        ]
+    },
+
+    'lumiere': {
+        nome: 'Lumière Atelier de Aromas',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/lumiere/principal.webp',
+        descricao: {
+            pt: 'Site de uma marca artesanal fictícia de velas de soja e sabonetes naturais. Quatro páginas com identidade visual refinada, banner responsivo com três tamanhos diferentes, carrossel de imagens nos produtos e sombra animada no header ao rolar. Um dos projetos que mais me orgulho esteticamente.',
+            en: 'Website for a fictional artisanal brand of soy candles and natural soaps. Four pages with a refined visual identity, responsive banner in three different sizes, image carousel on products and animated header shadow on scroll. One of the projects I\'m most proud of aesthetically.'
+        },
+        link: 'https://nathaliadebona.github.io/lumiere/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/lumiere',
+        resumo: {
+            pt: 'Site de um ateliê fictício de velas e sabonetes artesanais, com banner responsivo e carrossel de imagens nos produtos.',
+            en: 'Website for a fictional artisan studio of candles and soaps, with a responsive banner and image carousels on the products.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/lumiere/galeria-1.webp',
+            'imagens/projetos/lumiere/galeria-2.webp',
+            'imagens/projetos/lumiere/galeria-3.webp'
+        ]
+    },
+
+    'glow-republic': {
+        nome: 'Glow Republic',
+        tipo: 'varias-paginas',
+        destaque: true,
+        imagem: 'imagens/projetos/glow-republic/hero.webp',
+        descricao: {
+            pt: 'Site de uma marca de skincare vegano voltada ao público jovem, evoluído para um e-commerce com aparência real. Oito páginas interligadas, com carrinho funcional salvo no localStorage, modal de produtos, filtro por categoria, barra de aviso e selos de confiança. Também tem validação customizada de formulário, contador animado com IntersectionObserver e tag flutuante com @keyframes. Uma vitrine do meu crescimento com JavaScript.',
+            en: 'Website for a vegan skincare brand targeting young audiences, evolved into an e-commerce site with a realistic look. Eight interconnected pages, with a working cart saved in localStorage, product modal, category filter, announcement bar and trust badges. It also has custom form validation, an animated counter with IntersectionObserver and a floating tag with @keyframes. A showcase of my JavaScript growth.'
+        },
+        link: 'https://nathaliadebona.github.io/glow-republic/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/glow-republic',
+        resumo: {
+            pt: 'Site de uma marca de skincare vegano com carrinho funcional, modal de produtos e filtro por categoria.',
+            en: 'Vegan skincare brand website with a working cart, product modal and category filter.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'IntersectionObserver'],
+        galeria: [
+            'imagens/projetos/glow-republic/galeria-1.webp',
+            'imagens/projetos/glow-republic/galeria-2.webp',
+            'imagens/projetos/glow-republic/galeria-3.webp'
+        ]
+    },
+
+    'isabela-voss': {
+        nome: 'Isabela Voss',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/isabela-voss/principal.webp',
+        descricao: {
+            pt: 'Site portfólio de uma consultora de imagem e personal stylist. Um projeto que estava na gaveta e resolvi finalizar — simples, mas que fechou um ciclo e manteve o ritmo de entrega.',
+            en: 'Portfolio website for a fictional image consultant and personal stylist. A project that had been sitting in a drawer that I decided to finish — simple, but it closed a cycle and kept the delivery rhythm going.'
+        },
+        link: 'https://nathaliadebona.github.io/isabela-voss/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/isabela-voss',
+        resumo: {
+            pt: 'Site de portfólio de uma consultora de imagem fictícia, com menu mobile e destaque automático do link da seção visível.',
+            en: 'Portfolio website for a fictional image consultant, with a mobile menu and automatic highlighting of the link for the visible section.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/isabela-voss/galeria-1.webp',
+            'imagens/projetos/isabela-voss/galeria-2.webp'
+        ]
+    },
+
+    'mendes-braga': {
+        nome: 'Mendes & Braga Incorporações',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/mendes-braga/principal.webp',
+        descricao: {
+            pt: 'Site institucional de uma incorporadora fictícia de alto padrão. Primeiro desafio fora dos estilos que eu estava acostumada — mais sóbrio e corporativo. Inclui menu hambúrguer, contador de números animado com IntersectionObserver e validação customizada de formulário com mensagens de erro inline.',
+            en: 'Institutional website for a fictional high-end real estate developer. My first challenge outside the styles I was used to — more sober and corporate. Includes a hamburger menu, animated number counter with IntersectionObserver and custom form validation with inline error messages.'
+        },
+        link: 'https://nathaliadebona.github.io/mendes-braga/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/mendes-braga',
+        resumo: {
+            pt: 'Site institucional de uma incorporadora fictícia de imóveis de alto padrão, com contador animado e formulário validado.',
+            en: 'Institutional website for a fictional high-end real estate developer, with an animated counter and a validated form.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/mendes-braga/galeria-1.webp',
+            'imagens/projetos/mendes-braga/galeria-2.webp',
+            'imagens/projetos/mendes-braga/galeria-3.webp'
+        ]
+    },
+
+    'duarte-studio': {
+        nome: 'Duarte Studio',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/duarte-studio/principal.webp',
+        descricao: {
+            pt: 'Site portfólio de um estúdio de fotografia e vídeo fictício com estética editorial inspirada em revistas de moda. Meu primeiro projeto bilíngue PT/EN, com lightbox interativo no portfólio, menu hambúrguer e toggle de idioma via dataset. O mais trabalhoso até então — e o mais recompensador.',
+            en: 'Portfolio website for a fictional photography and video studio with an editorial aesthetic inspired by fashion magazines. My first bilingual PT/EN project, with an interactive lightbox in the portfolio, hamburger menu and language toggle via dataset. The most demanding so far — and the most rewarding.'
+        },
+        link: 'https://nathaliadebona.github.io/duarte-studio/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/duarte-studio',
+        resumo: {
+            pt: 'Site de uma single page para um fotógrafo e videomaker fictício, com lightbox interativo e versão em português e inglês.',
+            en: 'Single-page website for a fictional photographer and videomaker, with an interactive lightbox and Portuguese and English versions.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/duarte-studio/galeria-1.webp',
+            'imagens/projetos/duarte-studio/galeria-2.webp',
+            'imagens/projetos/duarte-studio/galeria-3.webp'
+        ]
+    },
+
+    'nexon': {
+        nome: 'Nexon',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/nexon/principal.webp',
+        descricao: {
+            pt: 'Landing page de uma startup B2B de SaaS fictícia especializada em automação com IA. O projeto mais ousado esteticamente: fundo escuro, efeitos de glow neon, glassmorphism no header e identidade visual gerada com IA. Bilíngue PT/EN com toggle de idioma e menu hambúrguer em painel.',
+            en: 'Landing page for a fictional B2B SaaS startup specializing in AI automation. The boldest project aesthetically: dark background, neon glow effects, glassmorphism in the header and AI-generated visual identity. Bilingual PT/EN with language toggle and panel hamburger menu.'
+        },
+        link: 'https://nathaliadebona.github.io/nexon/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/nexon',
+        resumo: {
+            pt: 'Landing page de uma startup fictícia de automação com IA, com efeitos de glow e glassmorphism e versão em português e inglês.',
+            en: 'Landing page for a fictional AI automation startup, with glow and glassmorphism effects and Portuguese and English versions.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/nexon/galeria-1.webp',
+            'imagens/projetos/nexon/galeria-2.webp',
+            'imagens/projetos/nexon/galeria-3.webp'
+        ]
+    },
+
+    'holy-kitchen-v2': {
+        nome: 'Holy Kitchen! V2',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/holy-kitchen-v2/principal.webp',
+        descricao: {
+            pt: 'Reconstrução completa do meu segundo site — agora com 13 páginas organizadas em hubs, JavaScript do zero ao avançado e identidade visual totalmente repensada. Inclui filtro de receitas, calculadora de porções proporcional, checklist interativo, modal de comparador de medidas, carrossel automático e validação customizada de formulários. A prova mais clara da minha evolução.',
+            en: 'A complete rebuild of my second website — now with 13 pages organized into hubs, JavaScript from basics to advanced and a completely rethought visual identity. Includes a recipe filter, proportional serving calculator, interactive checklist, measurement converter modal, automatic carousel and custom form validation. The clearest proof of my evolution.'
+        },
+        link: 'https://nathaliadebona.github.io/holy-kitchen-v2/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/holy-kitchen-v2',
+        resumo: {
+            pt: 'Site de receitas com filtros, calculadora de porções, blog de dicas e envio de receitas.',
+            en: 'Recipe website with filters, a serving calculator, a tips blog and recipe submission.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/holy-kitchen-v2/galeria-1.webp',
+            'imagens/projetos/holy-kitchen-v2/galeria-2.webp',
+            'imagens/projetos/holy-kitchen-v2/galeria-3.webp'
+        ]
+    },
+
+    'navalha-co': {
+        nome: 'Navalha & Co.',
+        tipo: 'pagina-unica',
+        destaque: false,
+        imagem: 'imagens/projetos/navalha-co/principal.webp',
+        descricao: {
+            pt: 'Site de uma barbearia premium fictícia na Vila Olímpia, reconstruído do zero com tudo que aprendi no caminho. Inclui modal de agendamento com dialog nativo reaproveitado pelos três barbeiros via dataset, galeria interativa com hover e scrollspy manual calculado via getBoundingClientRect. Nem sempre é o nicho que a gente escolheria — mas o resultado surpreendeu.',
+            en: 'Website for a fictional premium barbershop in Vila Olímpia, rebuilt from scratch with everything I\'d learned along the way. Includes a booking modal with a native dialog reused by all three barbers via dataset, interactive gallery with hover effects and manual scrollspy calculated via getBoundingClientRect. Not always the niche you\'d choose — but the result was surprising.'
+        },
+        link: 'https://nathaliadebona.github.io/navalha-e-co/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/navalha-e-co',
+        resumo: {
+            pt: 'Site de uma barbearia premium fictícia, com modal de agendamento e menu que acompanha a rolagem.',
+            en: 'Website for a fictional premium barbershop, with a booking modal and a menu that follows the scroll.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/navalha-co/galeria-1.webp',
+            'imagens/projetos/navalha-co/galeria-2.webp',
+            'imagens/projetos/navalha-co/galeria-3.webp'
+        ]
+    },
+
+    'bossa-static': {
+        nome: 'Bossa & Static',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/bossa-static/hero.webp',
+        descricao: {
+            pt: 'Loja virtual fictícia de discos nacionais e internacionais — meu primeiro e-commerce completo. Quatro páginas com carrinho funcional, filtro por categoria, cupom de desconto com validação, carrossel de depoimentos e modal de boas-vindas. Dados do carrinho persistem entre páginas via localStorage.',
+            en: 'A fictional online store for national and international vinyl records — my first complete e-commerce project. Four pages with a functional cart, category filter, discount coupon with validation, testimonial carousel and welcome modal. Cart data persists between pages via localStorage.'
+        },
+        link: 'https://nathaliadebona.github.io/bossa-e-static/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/bossa-e-static',
+        resumo: {
+            pt: 'Loja de discos fictícia com catálogo filtrável, carrinho persistente com localStorage e cupom de primeira compra.',
+            en: 'Fictional record store with a filterable catalog, a persistent localStorage cart and a first-purchase coupon.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'Font Awesome', 'Google Fonts'],
+        galeria: [
+            'imagens/projetos/bossa-static/galeria-1.webp',
+            'imagens/projetos/bossa-static/galeria-2.webp',
+            'imagens/projetos/bossa-static/galeria-3.webp'
+        ]
+    },
+
+    'devpocket': {
+        nome: 'DevPocket',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/devpocket/principal.webp',
+        descricao: {
+            pt: 'Guia de referência rápida para desenvolvedores front-end, com snippets de HTML, CSS e JavaScript organizados por categoria. Permite buscar por palavra-chave, copiar o código com um clique e favoritar os snippets mais usados — tudo salvo no localStorage. Um projeto utilitário que nasceu da própria rotina de estudos.',
+            en: 'A quick reference guide for front-end developers, with HTML, CSS and JavaScript snippets organized by category. Allows searching by keyword, copying code with one click and bookmarking the most-used snippets — all saved to localStorage. A utility project born from the study routine itself.'
+        },
+        link: 'https://nathaliadebona.github.io/devpocket/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/devpocket',
+        resumo: {
+            pt: 'Kit de bolso para devs: conversor de px para rem, conversor de cores e gerador de box-shadow.',
+            en: 'A pocket toolkit for devs: px to rem converter, color converter and box-shadow generator.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/devpocket/galeria-1.webp',
+            'imagens/projetos/devpocket/galeria-2.webp',
+            'imagens/projetos/devpocket/galeria-3.webp'
+        ]
+    },
+
+    'frontend-quiz': {
+        nome: 'Frontend Quiz',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/frontend-quiz/principal.webp',
+        descricao: {
+            pt: 'Quiz interativo de múltipla escolha sobre HTML, CSS, JavaScript e acessibilidade, baseado num desafio do Frontend Mentor. Quatro temas com ícones e cores próprios, feedback visual imediato a cada resposta, placar ao final e tema claro/escuro. Foi onde aprendi a estruturar dados em JSON e a renderizar a interface dinamicamente a partir deles.',
+            en: 'An interactive multiple-choice quiz on HTML, CSS, JavaScript and accessibility, based on a Frontend Mentor challenge. Four themes with their own icons and colors, immediate visual feedback on each answer, a final score and light/dark theme. This is where I learned to structure data in JSON and render the interface dynamically from it.'
+        },
+        link: 'https://nathaliadebona.github.io/frontend-quiz/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/frontend-quiz',
+        resumo: {
+            pt: 'Quiz com tempo sobre HTML, CSS e JavaScript, com três níveis de dificuldade e correção explicada.',
+            en: 'A timed quiz on HTML, CSS and JavaScript, with three difficulty levels and explained answers.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/frontend-quiz/galeria-1.webp',
+            'imagens/projetos/frontend-quiz/galeria-2.webp',
+            'imagens/projetos/frontend-quiz/galeria-3.webp'
+        ]
+    },
+
+    'moody': {
+        nome: 'Moody',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/moody/principal.webp',
+        descricao: {
+            pt: 'App de rastreamento de humor diário com check-in em duas etapas (humor e horas de sono), saudação dinâmica por horário, diário pessoal com histórico filtrável e paginação, e gráfico mensal de barras com rolagem horizontal. Cor de fundo da página muda conforme o humor predominante dos últimos 5 registros. Todos os dados ficam no localStorage.',
+            en: 'A daily mood tracking app with a two-step check-in (mood and sleep hours), time-based dynamic greeting, a personal journal with filterable history and pagination, and a monthly bar chart with horizontal scroll. The page background color changes according to the predominant mood from the last 5 entries. All data is stored in localStorage.'
+        },
+        link: 'https://nathaliadebona.github.io/moody/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/moody',
+        resumo: {
+            pt: 'App de humor diário com check-in rápido, diário pessoal e gráfico mensal.',
+            en: 'Daily mood app with a quick check-in, a personal journal and a monthly chart.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
+        galeria: [
+            'imagens/projetos/moody/galeria-1.webp',
+            'imagens/projetos/moody/galeria-2.webp',
+            'imagens/projetos/moody/galeria-3.webp'
+        ]
+    },
+
+    'password-generator': {
+        nome: 'Password Generator',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/password-generator/principal.webp',
+        descricao: {
+            pt: 'Gerador de senhas customizável baseado num desafio do Frontend Mentor: escolha o tamanho (5 a 20 caracteres) e os tipos de caracteres, veja o nível de força em quatro graus (muito fraca a forte) com texto e barras coloridas, e copie com um clique. Slider com preenchimento progressivo até o polegar, tema escuro, layout responsivo e acessibilidade básica.',
+            en: 'A customizable password generator based on a Frontend Mentor challenge: choose the length (5 to 20 characters) and character types, see the strength level in four grades (too weak to strong) with text and colored bars, and copy with one click. Slider with progressive fill up to the thumb, dark theme, responsive layout and basic accessibility.'
+        },
+        link: 'https://nathaliadebona.github.io/password-generator/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/password-generator',
+        resumo: {
+            pt: 'Gerador de senhas com tamanho ajustável, indicador de força e botão de copiar.',
+            en: 'Password generator with adjustable length, a strength indicator and a copy button.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript'],
+        galeria: [
+            'imagens/projetos/password-generator/principal.webp'
+        ]
+    },
+
+    'patinhas-e-cia': {
+        nome: 'Patinhas & Cia',
+        tipo: 'varias-paginas',
+        destaque: false,
+        imagem: 'imagens/projetos/patinhas-e-cia/principal.webp',
+        descricao: {
+            pt: 'Sistema de agendamento para um pet shop fictício com duas frentes: uma área para tutores navegarem pelos serviços e marcarem horários, e um painel da equipe com login simulado para gerenciar a agenda diária, status e pagamentos. Horários disponíveis calculados a partir da duração do serviço e horário de funcionamento, com domingos e datas passadas bloqueados. Layout mobile-first com animações que respeitam prefers-reduced-motion.',
+            en: 'A scheduling system for a fictional pet shop with two sides: a tutor area to browse services and book time slots, and a staff panel with a simulated login to manage the daily agenda, status and payments. Available slots calculated from the service duration and opening hours, with Sundays and past dates blocked. Mobile-first layout with animations that respect prefers-reduced-motion.'
+        },
+        link: 'https://nathaliadebona.github.io/patinhas-e-cia/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/patinhas-e-cia',
+        resumo: {
+            pt: 'Sistema de agendamento de um pet shop fictício, com área do tutor e painel da equipe.',
+            en: 'Scheduling system for a fictional pet shop, with a pet owner area and a staff panel.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
+        galeria: [
+            'imagens/projetos/patinhas-e-cia/galeria-1.webp',
+            'imagens/projetos/patinhas-e-cia/galeria-2.webp',
+            'imagens/projetos/patinhas-e-cia/galeria-3.webp'
+        ]
+    },
+
+    'focus-flow': {
+        nome: 'Focus & Flow',
+        tipo: 'app',
+        destaque: false,
+        imagem: 'imagens/projetos/focus-flow/hero.webp',
+        descricao: {
+            pt: 'Dashboard de produtividade pessoal com notas, calendário e estatísticas — inspirado nas ferramentas que uso no dia a dia. Permite criar, editar e excluir notas e eventos, anexar arquivos ao calendário e importar dados via CSV ou JSON. Tudo armazenado localmente via localStorage, sem nenhum servidor. Em evolução contínua.',
+            en: 'A personal productivity dashboard with notes, calendar and statistics — inspired by the tools I use every day. Allows creating, editing and deleting notes and events, attaching files to the calendar and importing data via CSV or JSON. Everything stored locally via localStorage, with no server. Continuously evolving.'
+        },
+        link: 'https://nathaliadebona.github.io/focus-flow/',
+        ano: 2026,
+        github: 'https://github.com/nathaliadebona/focus-flow',
+        resumo: {
+            pt: 'Dashboard de produtividade pessoal com notas, calendário e importação de dados, tudo salvo no próprio navegador.',
+            en: 'Personal productivity dashboard with notes, calendar and data import, all saved in the browser itself.'
+        },
+        tecnologias: ['HTML', 'CSS', 'JavaScript', 'localStorage', 'File API'],
+        galeria: [
+            'imagens/projetos/focus-flow/galeria-1.webp',
+            'imagens/projetos/focus-flow/galeria-2.webp',
+            'imagens/projetos/focus-flow/galeria-3.webp'
+        ]
+    }
+}
+
+const tipos = {
+    'pagina-unica': { pt: 'Páginas únicas', en: 'Single pages' },
+    'varias-paginas': { pt: 'Sites com várias páginas', en: 'Multi-page sites' },
+    'app': { pt: 'Apps interativos', en: 'Interactive apps' },
+    'backend': { pt: 'Com backend', en: 'With backend' }
+}
